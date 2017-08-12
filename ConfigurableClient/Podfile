@@ -1,0 +1,35 @@
+#Uncomment this line to define a global platform for your project
+
+
+
+platform :ios, '7.0'
+# 抑制所有警告
+inhibit_all_warnings!
+
+target 'ConfigurableClient' do
+
+pod 'Masonry', '~> 0.6.3'
+pod 'MJRefresh', '~> 3.0.1'
+pod 'MJExtension', '~> 3.0.3'
+pod 'AFNetworking', '~>3.0.4'
+pod 'Reachability', '~> 3.2'
+pod 'SDWebImage/Core', '~> 3.7.3'
+pod 'SDCycleScrollView', '~> 1.3'
+pod 'GPUImage', '~> 0.1.7'
+pod 'MBProgressHUD', '~> 0.9.2'
+pod 'pop', '~> 1.0.9'
+pod 'BaiduMapKit', '~>3.0.0’
+pod 'IQKeyboardManager'
+pod 'CTAssetsPickerController'
+pod 'JPush'
+#pod 'YYKit'
+#  json和model
+pod 'YYModel'
+#   数据库
+pod 'FMDB'
+
+#设置collectionview的控件对齐方式
+pod 'UICollectionViewLeftAlignedLayout'
+pod 'WechatOpenSDK'
+end
+

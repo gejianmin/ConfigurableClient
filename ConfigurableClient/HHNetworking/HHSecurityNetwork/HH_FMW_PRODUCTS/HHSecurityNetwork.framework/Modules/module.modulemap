@@ -1,0 +1,6 @@
+framework module HHSecurityNetwork {
+  umbrella header "HHSecurityNetwork.h"
+
+  export *
+  module * { export * }
+}
