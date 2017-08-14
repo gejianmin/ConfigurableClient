@@ -21,6 +21,10 @@
     
     [self.window setRootViewController:[self pickViewController]];
     
+    
+    
+    
+    
     return YES;
 }
 
