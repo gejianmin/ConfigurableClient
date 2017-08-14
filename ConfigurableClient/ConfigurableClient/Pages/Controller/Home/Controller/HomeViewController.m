@@ -50,16 +50,9 @@ static NSString *const kCRMWorkTeleconferenceManage = @"http://f.apiplus.net/gd1
     return _bannerView;
 }
 -(void)setupUI{
-    _button =[[CustomBtn alloc]initWithFrame:CGRectMake(100, 350, 80, 80) Tag:0 Title:nil backgroundColor:kColorBlue TitleTextColor:nil Font:0 Image:ImageNamed(@"1024")];
-    [self.view addSubview:_button];
-    [_button addTarget:self action:@selector(dsddsds) forControlEvents:UIControlEventTouchUpInside];
-}
--(void)dsddsds{
     
-    SecondViewController * VC =[[SecondViewController alloc]init];
-//    [self.navigationController pushViewController:VC animated:YES];
-    [self.navigationController presentViewController:VC animated:YES completion:nil];
 }
+
 -(NSArray *)imgNamesArray{
     if (_imgNamesArray == nil) {
         NSArray * array = @[@"http://desk.fd.zol-img.com.cn/t_s208x130c5/g5/M00/0B/05/ChMkJlcgdH2IVmv2AAYP2zcB7GQAAQr3gJjQtUABg_z016.jpg",

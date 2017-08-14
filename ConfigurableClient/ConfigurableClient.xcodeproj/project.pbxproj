@@ -15,17 +15,17 @@
 		3738FC011F0C89CE008FE3C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3738FBFF1F0C89CE008FE3C7 /* LaunchScreen.storyboard */; };
 		3738FC0C1F0C89CF008FE3C7 /* ConfigurableClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3738FC0B1F0C89CF008FE3C7 /* ConfigurableClientTests.m */; };
 		3738FC171F0C89CF008FE3C7 /* ConfigurableClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3738FC161F0C89CF008FE3C7 /* ConfigurableClientUITests.m */; };
-		3738FDBB1F0C9750008FE3C7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3738FDBA1F0C9750008FE3C7 /* HomeViewController.m */; };
+		373B84FF1F417CE300F65132 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B84F91F417CE300F65132 /* MyViewController.m */; };
+		373B85001F417CE300F65132 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B84FB1F417CE300F65132 /* SecondViewController.m */; };
+		373B85011F417CE300F65132 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B84FD1F417CE300F65132 /* ThirdViewController.m */; };
+		373B850A1F417EC500F65132 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B85051F417EC500F65132 /* HomeViewController.m */; };
+		373B850B1F417EC500F65132 /* HHBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B85091F417EC500F65132 /* HHBannerView.m */; };
 		37A8A5131F2A028600F35513 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A50E1F2A028600F35513 /* MainViewController.m */; };
 		37A8A5141F2A028600F35513 /* HHTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A5121F2A028600F35513 /* HHTabbar.m */; };
 		37A8A51D1F2A041E00F35513 /* CRMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A51C1F2A041E00F35513 /* CRMBaseViewController.m */; };
 		37A8A5221F2A09F800F35513 /* CustomBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A51F1F2A09F800F35513 /* CustomBtn.m */; };
 		37A8A5231F2A09F800F35513 /* CustomLab.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A5211F2A09F800F35513 /* CustomLab.m */; };
-		37A8A5261F2A0AAF00F35513 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A5251F2A0AAF00F35513 /* SecondViewController.m */; };
-		37A8A5291F2A0ABF00F35513 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A5281F2A0ABF00F35513 /* ThirdViewController.m */; };
-		37A8A52C1F2A0ACE00F35513 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A52B1F2A0ACE00F35513 /* MyViewController.m */; };
 		37A8A52F1F2A0BA500F35513 /* JDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A52E1F2A0BA500F35513 /* JDNavigationController.m */; };
-		37A8A5361F2AD3F500F35513 /* HHBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A5351F2AD3F500F35513 /* HHBannerView.m */; };
 		37A8A5381F2B063300F35513 /* HHNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A8A5371F2B063300F35513 /* HHNetworking.framework */; };
 		37A8A53B1F2B065E00F35513 /* HHKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A8A5391F2B065E00F35513 /* HHKit.framework */; };
 		37A8A53C1F2B065E00F35513 /* HHSecurityNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A8A53A1F2B065E00F35513 /* HHSecurityNetwork.framework */; };
@@ -64,9 +64,17 @@
 		3738FC121F0C89CF008FE3C7 /* ConfigurableClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfigurableClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3738FC161F0C89CF008FE3C7 /* ConfigurableClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigurableClientUITests.m; sourceTree = "<group>"; };
 		3738FC181F0C89CF008FE3C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3738FDB91F0C9750008FE3C7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../../../DEMO/ConfigurableClient/ConfigurableClient/Controller/HomeViewController.h; sourceTree = "<group>"; };
-		3738FDBA1F0C9750008FE3C7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../../../DEMO/ConfigurableClient/ConfigurableClient/Controller/HomeViewController.m; sourceTree = "<group>"; };
 		3738FDBC1F0C9A6F008FE3C7 /* NL_prefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NL_prefixHeader.pch; sourceTree = "<group>"; };
+		373B84F81F417CE300F65132 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		373B84F91F417CE300F65132 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		373B84FA1F417CE300F65132 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		373B84FB1F417CE300F65132 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		373B84FC1F417CE300F65132 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		373B84FD1F417CE300F65132 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		373B85041F417EC500F65132 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		373B85051F417EC500F65132 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		373B85081F417EC500F65132 /* HHBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBannerView.h; sourceTree = "<group>"; };
+		373B85091F417EC500F65132 /* HHBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBannerView.m; sourceTree = "<group>"; };
 		37A8A50D1F2A028600F35513 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		37A8A50E1F2A028600F35513 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		37A8A5111F2A028600F35513 /* HHTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHTabbar.h; sourceTree = "<group>"; };
@@ -82,16 +90,8 @@
 		37A8A51F1F2A09F800F35513 /* CustomBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBtn.m; sourceTree = "<group>"; };
 		37A8A5201F2A09F800F35513 /* CustomLab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLab.h; sourceTree = "<group>"; };
 		37A8A5211F2A09F800F35513 /* CustomLab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLab.m; sourceTree = "<group>"; };
-		37A8A5241F2A0AAF00F35513 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		37A8A5251F2A0AAF00F35513 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		37A8A5271F2A0ABF00F35513 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
-		37A8A5281F2A0ABF00F35513 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
-		37A8A52A1F2A0ACE00F35513 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		37A8A52B1F2A0ACE00F35513 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		37A8A52D1F2A0BA500F35513 /* JDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDNavigationController.h; sourceTree = "<group>"; };
 		37A8A52E1F2A0BA500F35513 /* JDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDNavigationController.m; sourceTree = "<group>"; };
-		37A8A5341F2AD3F500F35513 /* HHBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBannerView.h; sourceTree = "<group>"; };
-		37A8A5351F2AD3F500F35513 /* HHBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBannerView.m; sourceTree = "<group>"; };
 		37A8A5371F2B063300F35513 /* HHNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HHNetworking.framework; path = "../../../Library/Developer/Xcode/DerivedData/ConfigurableClient-cmbujioeksjqvsfzvkxkwyqzqhyh/Build/Products/Debug-iphonesimulator/HHNetworking.framework"; sourceTree = "<group>"; };
 		37A8A5391F2B065E00F35513 /* HHKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HHKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/ConfigurableClient-cmbujioeksjqvsfzvkxkwyqzqhyh/Build/Products/Debug-iphonesimulator/HHKit.framework"; sourceTree = "<group>"; };
 		37A8A53A1F2B065E00F35513 /* HHSecurityNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HHSecurityNetwork.framework; path = "../../../Library/Developer/Xcode/DerivedData/ConfigurableClient-cmbujioeksjqvsfzvkxkwyqzqhyh/Build/Products/Debug-iphonesimulator/HHSecurityNetwork.framework"; sourceTree = "<group>"; };
@@ -201,27 +201,9 @@
 		3738FC241F0C8A0F008FE3C7 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				37A8A5301F2AD3B100F35513 /* Home */,
-				3738FDB81F0C9737008FE3C7 /* Controller */,
-				3738FC261F0C8A99008FE3C7 /* Config */,
-				3738FC251F0C8A65008FE3C7 /* Common */,
+				373B84F51F417CE300F65132 /* Controller */,
 			);
 			path = Pages;
-			sourceTree = "<group>";
-		};
-		3738FC251F0C8A65008FE3C7 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		3738FC261F0C8A99008FE3C7 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Config;
-			path = ../Config;
 			sourceTree = "<group>";
 		};
 		3738FDB61F0C970E008FE3C7 /* Main */ = {
@@ -241,18 +223,53 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		3738FDB81F0C9737008FE3C7 /* Controller */ = {
+		373B84F51F417CE300F65132 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				37A8A5241F2A0AAF00F35513 /* SecondViewController.h */,
-				37A8A5251F2A0AAF00F35513 /* SecondViewController.m */,
-				37A8A5271F2A0ABF00F35513 /* ThirdViewController.h */,
-				37A8A5281F2A0ABF00F35513 /* ThirdViewController.m */,
-				37A8A52A1F2A0ACE00F35513 /* MyViewController.h */,
-				37A8A52B1F2A0ACE00F35513 /* MyViewController.m */,
+				373B85021F417EC500F65132 /* Home */,
+				373B84F81F417CE300F65132 /* MyViewController.h */,
+				373B84F91F417CE300F65132 /* MyViewController.m */,
+				373B84FA1F417CE300F65132 /* SecondViewController.h */,
+				373B84FB1F417CE300F65132 /* SecondViewController.m */,
+				373B84FC1F417CE300F65132 /* ThirdViewController.h */,
+				373B84FD1F417CE300F65132 /* ThirdViewController.m */,
 			);
-			name = Controller;
-			path = ../Controller;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		373B85021F417EC500F65132 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				373B85031F417EC500F65132 /* Controller */,
+				373B85061F417EC500F65132 /* Model */,
+				373B85071F417EC500F65132 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		373B85031F417EC500F65132 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				373B85041F417EC500F65132 /* HomeViewController.h */,
+				373B85051F417EC500F65132 /* HomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		373B85061F417EC500F65132 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		373B85071F417EC500F65132 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				373B85081F417EC500F65132 /* HHBannerView.h */,
+				373B85091F417EC500F65132 /* HHBannerView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		37A8A50C1F2A028600F35513 /* BaseController */ = {
@@ -300,42 +317,6 @@
 				37A8A51A1F2A032D00F35513 /* HHNotificationConfig.h */,
 			);
 			path = Config;
-			sourceTree = "<group>";
-		};
-		37A8A5301F2AD3B100F35513 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				37A8A5311F2AD3B100F35513 /* Controller */,
-				37A8A5321F2AD3B100F35513 /* Model */,
-				37A8A5331F2AD3B100F35513 /* View */,
-			);
-			name = Home;
-			path = "../../../../空文件夹/Home";
-			sourceTree = "<group>";
-		};
-		37A8A5311F2AD3B100F35513 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				3738FDB91F0C9750008FE3C7 /* HomeViewController.h */,
-				3738FDBA1F0C9750008FE3C7 /* HomeViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		37A8A5321F2AD3B100F35513 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		37A8A5331F2AD3B100F35513 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				37A8A5341F2AD3F500F35513 /* HHBannerView.h */,
-				37A8A5351F2AD3F500F35513 /* HHBannerView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		5B3BA4D2E6C4E765CC4F7D12 /* Frameworks */ = {
@@ -559,20 +540,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A8A52C1F2A0ACE00F35513 /* MyViewController.m in Sources */,
-				37A8A5261F2A0AAF00F35513 /* SecondViewController.m in Sources */,
+				373B850B1F417EC500F65132 /* HHBannerView.m in Sources */,
 				37A8A5231F2A09F800F35513 /* CustomLab.m in Sources */,
+				373B85001F417CE300F65132 /* SecondViewController.m in Sources */,
 				3738FBF61F0C89CE008FE3C7 /* AppDelegate.m in Sources */,
 				37A8A5141F2A028600F35513 /* HHTabbar.m in Sources */,
 				37A8A52F1F2A0BA500F35513 /* JDNavigationController.m in Sources */,
 				3738FBF31F0C89CE008FE3C7 /* main.m in Sources */,
+				373B85011F417CE300F65132 /* ThirdViewController.m in Sources */,
 				37A8A5221F2A09F800F35513 /* CustomBtn.m in Sources */,
-				37A8A5291F2A0ABF00F35513 /* ThirdViewController.m in Sources */,
-				3738FDBB1F0C9750008FE3C7 /* HomeViewController.m in Sources */,
+				373B84FF1F417CE300F65132 /* MyViewController.m in Sources */,
 				37A8A51D1F2A041E00F35513 /* CRMBaseViewController.m in Sources */,
 				37A8A5131F2A028600F35513 /* MainViewController.m in Sources */,
 				37A8A5491F2C32D200F35513 /* UIView+RoundCorner.m in Sources */,
-				37A8A5361F2AD3F500F35513 /* HHBannerView.m in Sources */,
+				373B850A1F417EC500F65132 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

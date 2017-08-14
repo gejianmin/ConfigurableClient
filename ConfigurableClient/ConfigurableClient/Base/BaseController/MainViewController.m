@@ -51,27 +51,28 @@
 }
 #pragma mark -setup
 - (void)setupControllers{
+    
     HomeViewController *home=[[HomeViewController alloc] init];
-    home.title=@"彩票首页";
-    home.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"首页" image:nil tag:0];
+    home.title=@"Home";
+    home.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Home" image:nil tag:0];
     home.tabBarItem.image=[UIImage imageNamed:@"tabbar_home_n"];
     home.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_home_s"];
     
     SecondViewController *service=[[SecondViewController alloc] init];
-    service.title=@"消息";
-    service.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"消息" image:nil tag:1];
+    service.title=@"Read";
+    service.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Read" image:nil tag:1];
     service.tabBarItem.image=[UIImage imageNamed:@"tabbar_information_n"];
     service.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_information_s"];
     
     ThirdViewController *vc3=[[ThirdViewController alloc] init];
-    vc3.title=@"工作";
-    vc3.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"工作" image:nil tag:2];
+    vc3.title=@"Article";
+    vc3.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Article" image:nil tag:2];
     vc3.tabBarItem.image=[UIImage imageNamed:@"tabbar_work_n"];
     vc3.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_work_s"];
     
     MyViewController *exchange=[[MyViewController alloc] init];
-    exchange.title=@"个人中心";
-    exchange.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"我的" image:nil tag:3];
+    exchange.title=@"UserCenter";
+    exchange.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"UserCenter" image:nil tag:3];
     exchange.tabBarItem.image=[UIImage imageNamed:@"tabbar_my_n"];
     exchange.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_my_s"];
     
