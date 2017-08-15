@@ -35,6 +35,11 @@ typedef NS_ENUM(NSInteger, NinaBannerSource) {
  */
 @property (nonatomic, assign) BOOL showPageControl;
 /**
+ 是否要立体动画
+ */
+@property (nonatomic, assign) BOOL showTransition;
+
+/**
  当前页点的颜色
  */
 @property (nonatomic, strong) UIColor *currentPageIndicatorTintColor;

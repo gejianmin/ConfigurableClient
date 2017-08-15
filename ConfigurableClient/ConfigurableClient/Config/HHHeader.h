@@ -21,6 +21,7 @@
 #import "HHFontConfig.h"
 //#import "HHNotificationConst.h"
 #import "HHGloabConfig.h"
+#import "HHAPIContantString.h"
 //#import "HHBaseWebViewController.h"
 //#import "HHStatisticsHandle.h"
 //#import "BaseVC.h"

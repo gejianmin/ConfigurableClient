@@ -8,7 +8,7 @@
 
 #import "HHBannerView.h"
 #import "UIImageView+WebCache.h"
-@interface HHBannerView()
+@interface HHBannerView()<CAAnimationDelegate>
 
 @property (nonatomic,strong) UIImageView *imgView;                  // 显示图片的视图
 @property (nonatomic,strong) NSArray *imgArr;                       // 图片数组
@@ -82,14 +82,13 @@
         _pageControl.numberOfPages = totalNumber;
         CGSize size = [_pageControl sizeForNumberOfPages:totalNumber];
         _pageControl.frame = CGRectMake(0, 0, size.width, size.height);
-        _pageControl.center = CGPointMake(self.center.x, SELFHEIGHT - 8);
+        _pageControl.center = CGPointMake(SELFWIDTH-45, SELFHEIGHT - 8);
         _pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
         _pageControl.pageIndicatorTintColor = [UIColor grayColor];
         _pageControl.hidesForSinglePage = YES;
     }
     return _pageControl;
 }
-
 - (void)handleSwipeFromRight{
     currentPage++;
     if (currentPage >= self.imgArr.count) {
@@ -102,16 +101,14 @@
     }else if (bannerSourceType == 1) {
         [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]];
     }
-    
-    //转场动画
-    CATransition *transition = [[CATransition alloc] init];
-    transition.type = @"cube";                //立方体翻转
-    transition.subtype = kCATransitionFromRight;
-    transition.duration = 1.5;
-    transition.delegate = self;
-    [self.imgView.layer addAnimation:transition forKey:nil];
-    
-
+    if (self.showTransition) {
+        CATransition *transition = [[CATransition alloc] init];
+        transition.type = @"cube";                //立方体翻转
+        transition.subtype = kCATransitionFromRight;
+        transition.duration = 1.5;
+        transition.delegate = self;
+        [self.imgView.layer addAnimation:transition forKey:nil];
+    }
 }
 - (void)handleSwipeFromLeft{
     
