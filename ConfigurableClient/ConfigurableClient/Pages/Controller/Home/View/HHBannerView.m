@@ -14,6 +14,8 @@
 @property (nonatomic,strong) NSArray *imgArr;                       // 图片数组
 @property (nonatomic, strong) NSTimer *myTimer;                     // 定时器
 @property (nonatomic, strong) UIPageControl *pageControl;           // 下方显示页数
+@property (nonatomic, strong) CustomLab * titleLabel;           // 显示标题
+
 @end
 
 @implementation HHBannerView
@@ -25,13 +27,14 @@
     NSMutableArray *bannerImageArray;
     NSInteger bannerSourceType;
 }
-- (instancetype)initWithFrame:(CGRect)frame WithBannerSource:(NinaBannerSource)bannerSource WithBannerArray:(NSArray *)bannerArray{
+- (instancetype)initWithFrame:(CGRect)frame WithBannerSource:(NinaBannerSource)bannerSource WithBannerArray:(NSArray *)bannerArray titleArray:(NSArray *)titleArray{
     if (self = [super initWithFrame:frame]) {
         SELFWIDTH = frame.size.width;
         SELFHEIGHT = frame.size.height;
         totalNumber = bannerArray.count;
         currentPage = 0;
         _imgArr = bannerArray;
+        _titleArr = titleArray;
         bannerSourceType = bannerSource;
         
         self.imgArr = bannerArray;
@@ -39,10 +42,18 @@
         self.imgView.backgroundColor = [UIColor lightGrayColor];
         [self addSubview:self.imgView];
         self.imgView.userInteractionEnabled = YES;
+        //标题
+        UIView * bgView = [[UIView alloc]initWithFrame:CGRectMake(0, frame.size.height-30, frame.size.width, 30) color:HEXCOLOR(0x000000,0.6)];
+        [self addSubview:bgView];
+        self.titleLabel = [[CustomLab alloc]initWithFrame:CGRectMake(0, frame.size.height-25, frame.size.width-50, 20) font:15.0 aligment:NSTextAlignmentLeft text:self.titleArr[0] textcolor:[UIColor whiteColor]];
+        self.titleLabel.numberOfLines = 0;
+        [self addSubview:self.titleLabel];
+
         if (bannerSourceType == 0) {
             self.imgView.image = [UIImage imageNamed:self.imgArr[currentPage]];
         }else if (bannerSourceType == 1) {
             [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]];
+            self.titleLabel.text = self.titleArr[currentPage];
         }
 
         UISwipeGestureRecognizer *fromRightRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFromRight)];
@@ -60,6 +71,23 @@
     return self;
 }
 
+
+- (void)reloadDataWithBannerArray:(NSArray *)bannerArray titleArray:(NSArray *)titleArray {
+    totalNumber = bannerArray.count;
+    _imgArr = bannerArray;
+    self.imgArr = bannerArray;
+    _titleArr = titleArray;
+    currentPage = 0;
+    self.showPageControl = YES;
+    self.pageControl.numberOfPages = totalNumber;
+    if (bannerSourceType == 0) {
+        self.imgView.image = [UIImage imageNamed:self.imgArr[currentPage]];
+    }else if (bannerSourceType == 1) {
+        [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]];
+        self.titleLabel.text = self.titleArr[currentPage];
+    }
+}
+
 #pragma mark - SetMethod
 - (void)setPageIndicatorTintColor:(UIColor *)pageIndicatorTintColor {
     self.pageControl.pageIndicatorTintColor = pageIndicatorTintColor;
@@ -69,7 +97,7 @@
 }
 
 - (void)setShowPageControl:(BOOL)showPageControl {
-    if (showPageControl == YES) {
+    if (showPageControl) {
         [self addSubview:self.pageControl];
     }
 }
@@ -82,7 +110,7 @@
         _pageControl.numberOfPages = totalNumber;
         CGSize size = [_pageControl sizeForNumberOfPages:totalNumber];
         _pageControl.frame = CGRectMake(0, 0, size.width, size.height);
-        _pageControl.center = CGPointMake(SELFWIDTH-45, SELFHEIGHT - 8);
+        _pageControl.center = CGPointMake(SELFWIDTH-45, SELFHEIGHT - 15);
         _pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
         _pageControl.pageIndicatorTintColor = [UIColor grayColor];
         _pageControl.hidesForSinglePage = YES;
@@ -100,15 +128,19 @@
         self.imgView.image = [UIImage imageNamed:self.imgArr[currentPage]];
     }else if (bannerSourceType == 1) {
         [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]];
+        self.titleLabel.text = self.titleArr[currentPage];
+
     }
-    if (self.showTransition) {
         CATransition *transition = [[CATransition alloc] init];
+    if (self.showTransition) {
         transition.type = @"cube";                //立方体翻转
+    }
         transition.subtype = kCATransitionFromRight;
-        transition.duration = 1.5;
+        transition.duration = 0.5;
         transition.delegate = self;
         [self.imgView.layer addAnimation:transition forKey:nil];
-    }
+//        [self.titleLabel.layer addAnimation:transition forKey:nil];
+
 }
 - (void)handleSwipeFromLeft{
     
@@ -122,10 +154,13 @@
         self.imgView.image = [UIImage imageNamed:self.imgArr[currentPage]];
     }else if (bannerSourceType == 1) {
         [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]];
-    }
+        self.titleLabel.text = self.titleArr[currentPage];
 
+    }
     CATransition *transition2 = [[CATransition alloc] init];
+    if (self.showTransition) {
     transition2.type = @"cube";
+    }
     transition2.subtype = kCATransitionFromLeft;
     transition2.duration = 1.5;
     transition2.delegate = self;

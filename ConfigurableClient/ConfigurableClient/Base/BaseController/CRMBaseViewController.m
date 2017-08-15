@@ -9,7 +9,7 @@
 #import "CRMBaseViewController.h"
 #import "MBProgressHUD.h"
 #import <IQKeyboardManager.h>
-@interface CRMBaseViewController ()<UIAlertViewDelegate,UIGestureRecognizerDelegate>
+@interface CRMBaseViewController ()<UIAlertViewDelegate,UIGestureRecognizerDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     NSInteger _navigationStackCount;
     MBProgressHUD *_hud;
@@ -97,7 +97,9 @@
 #pragma mark - getter
 - (UITableView *)tableView{
     if (_tableView==nil) {
-        _tableView=[[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView=[[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
     }
     return _tableView;
 }

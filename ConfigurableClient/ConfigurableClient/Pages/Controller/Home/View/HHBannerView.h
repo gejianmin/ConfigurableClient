@@ -38,6 +38,10 @@ typedef NS_ENUM(NSInteger, NinaBannerSource) {
  是否要立体动画
  */
 @property (nonatomic, assign) BOOL showTransition;
+/**
+ 图片标题
+ */
+@property (nonatomic,strong) NSArray *titleArr;
 
 /**
  当前页点的颜色
@@ -56,10 +60,10 @@ typedef NS_ENUM(NSInteger, NinaBannerSource) {
  * 初始化3D轮播图
  *
  * @param frame            轮播图尺寸.
- * @param WithBannerSource 选择加载本地还是网络图片.
- * @param WithBannerArray  本地图片名字数组（ 网络图片URL地址 ）
+ * @param bannerSource 选择加载本地还是网络图片.
+ * @param bannerArray  本地图片名字数组（ 网络图片URL地址 ）
  *
  */
-- (instancetype)initWithFrame:(CGRect)frame WithBannerSource:(NinaBannerSource)bannerSource WithBannerArray:(NSArray *)bannerArray;
-
+- (instancetype)initWithFrame:(CGRect)frame WithBannerSource:(NinaBannerSource)bannerSource WithBannerArray:(NSArray *)bannerArray titleArray:(NSArray *)titleArray;
+- (void)reloadDataWithBannerArray:(NSArray *)bannerArray titleArray:(NSArray *)titleArray;
 @end

@@ -10,7 +10,7 @@
 #import "HHBannerView.h"
 #import "HeaderModel.h"
 #import "HHBaseWebViewcontroller.h"
-
+#import "HomeCell.h"
 @interface HomeViewController ()<HHBannerViewDelegate>
 {
     
@@ -26,7 +26,110 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self configDataSource];
+    [self initUI];
+}
+-(void)initUI{
     
+    self.tableView.backgroundColor=[UIColor clearColor];
+    self.tableView.frame = CGRectMake(0, 63, HH_SCREEN_W, HH_SCREEN_H-64-10);
+    [self.tableView registerClass:[HomeCell class] forCellReuseIdentifier:NSStringFromClass([HomeCell class])];
+    [self.tableView setTableHeaderView:[self tableViewHeaderView]];
+    [self.view addSubview:self.tableView];
+    
+}
+-(UIView *)tableViewHeaderView {
+//    HHBannerView *headerView = [[HHBannerView alloc]initWithFrame:CGRectMake(0, 0, HH_SCREEN_W, 260)];
+     HHBannerView *headerView = [[HHBannerView alloc]initWithFrame:CGRectMake(0, 64, HH_SCREEN_W, 260) WithBannerSource:NinaBannerStyleOnlyWebSource WithBannerArray:nil titleArray:nil];
+
+    [headerView setBackgroundColor:kColorBlue];
+//    headerView = self.bannerView;
+    self.bannerView = headerView;
+    _bannerView.timeInterval = 2;
+    _bannerView.showPageControl = YES;
+    //    _bannerView.showTransition = YES;
+    _bannerView.delegate = self;
+    return headerView;
+}
+-(void)setupUIWithimageArray:(NSArray *)imageArray titleArray:(NSArray *)titleArray {
+//    _bannerView = [[HHBannerView alloc]initWithFrame:CGRectMake(0, 64, HH_SCREEN_W, 260) WithBannerSource:NinaBannerStyleOnlyWebSource WithBannerArray:imageArray titleArray:titleArray];
+    [_bannerView reloadDataWithBannerArray:imageArray titleArray:titleArray];
+//    _bannerView.timeInterval = 2;
+//    _bannerView.showPageControl = YES;
+////    //    _bannerView.showTransition = YES;
+//    _bannerView.delegate = self;
+//    //    [self.view addSubview:self.bannerView];
+}
+-(NSMutableArray *)dataSourceArray{
+    if (_dataSourceArray == nil) {
+        _dataSourceArray =[[NSMutableArray alloc]init];
+    }
+    return _dataSourceArray;
+}
+#pragma mark - tableViewDelegate
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//
+//    return self.dataSourceArray.count;
+//}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+//    if (section == 0) {
+//
+//        return 0.00001;
+//    }
+//    return 10;
+//}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return [self.dataSourceArray count];
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    
+    return [HomeCell cellHeight];
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    HomeCell * cell =[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HomeCell class])];
+    HeaderModel * model = self.dataSourceArray[indexPath.row];
+    cell.headerModel= model;
+    
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    HeaderModel *model=self.dataSourceArray[indexPath.row];
+    
+    NSString * newsId = [NSString stringWithFormat:@"%@%@",kNews_HeadlineNewsId,model.newsId];
+    [[[HHClient sharedInstance] sessionManager] post:newsId params:nil complete:^(id response, HHError *error) {
+        if (error) {
+            [self showToastHUD:error.localizedDescription complete:nil];
+        }else{
+            NSArray * list =[HeaderModel mj_objectArrayWithKeyValuesArray:response[@"newslist"]];
+            HeaderModel * modelTemp = [list firstObject];
+            HHBaseWebViewcontroller * VC =[[HHBaseWebViewcontroller alloc]init];
+            VC.url = modelTemp.url;
+            [self.navigationController pushViewController:VC animated:YES];
+        }
+    }];
+    
+}
+
+#pragma mark - HHBannerViewDelegate
+- (void)hhBannerView:(HHBannerView *)bannerView didSelectItemAtIndex:(NSInteger)index{
+    HeaderModel *model=self.dataSourceArray[index];
+    NSString * newsId = [NSString stringWithFormat:@"%@%@",kNews_HeadlineNewsId,model.newsId];
+    [[[HHClient sharedInstance] sessionManager] post:newsId params:nil complete:^(id response, HHError *error) {
+        if (error) {
+            [self showToastHUD:error.localizedDescription complete:nil];
+        }else{
+            NSArray * list =[HeaderModel mj_objectArrayWithKeyValuesArray:response[@"newslist"]];
+            HeaderModel * modelTemp = [list firstObject];
+            HHBaseWebViewcontroller * VC =[[HHBaseWebViewcontroller alloc]init];
+            VC.url = modelTemp.url;
+            [self.navigationController pushViewController:VC animated:YES];
+        }
+    }];
+    
+}
+-(void)configDataSource{
     [[[HHClient sharedInstance] sessionManager] post:kNews_Headline params:nil complete:^(id response, HHError *error) {
         if (error) {
             [self showToastHUD:error.localizedDescription complete:nil];
@@ -44,49 +147,22 @@
             //            }
             [self.dataSourceArray removeAllObjects];
             [self.dataSourceArray addObjectsFromArray:list];
-            //            [self.crm_tableView reloadData];
+            [self.tableView reloadData];
             
             NSMutableArray * array = [NSMutableArray array];
+            NSMutableArray * titleArray = [NSMutableArray array];
+            
             for (int i = 0; i < 4; i++) {
                 HeaderModel *model=self.dataSourceArray[i];
                 if (![model.image isEqualToString:@""]) {
                     [array addObject:model.image];
+                    [titleArray addObject:model.title];
                 }
             };
-            [self setupUIWithimageArray:array];
+            [self setupUIWithimageArray:array titleArray:titleArray];
         }
     }];
     
-}
--(void)setupUIWithimageArray:(NSArray *)imageArray {
-    _bannerView = [[HHBannerView alloc]initWithFrame:CGRectMake(0, 64, HH_SCREEN_W, 200) WithBannerSource:NinaBannerStyleOnlyWebSource WithBannerArray:imageArray];
-    _bannerView.timeInterval = 2;
-    _bannerView.showPageControl = YES;
-    _bannerView.showTransition = YES;
-    _bannerView.delegate = self;
-    [self.view addSubview:self.bannerView];
-}
--(NSMutableArray *)dataSourceArray{
-    if (_dataSourceArray == nil) {
-        _dataSourceArray =[[NSMutableArray alloc]init];
-    }
-    return _dataSourceArray;
-}
-#pragma mark - HHBannerViewDelegate
-- (void)hhBannerView:(HHBannerView *)bannerView didSelectItemAtIndex:(NSInteger)index{
-    HeaderModel *model=self.dataSourceArray[index];
-    NSString * newsId = [NSString stringWithFormat:@"%@%@",kNews_HeadlineNewsId,model.newsId];
-    [[[HHClient sharedInstance] sessionManager] post:newsId params:nil complete:^(id response, HHError *error) {
-        if (error) {
-            [self showToastHUD:error.localizedDescription complete:nil];
-        }else{
-            NSArray * list =[HeaderModel mj_objectArrayWithKeyValuesArray:response[@"newslist"]];
-            HeaderModel * modelTemp = [list firstObject];
-            HHBaseWebViewcontroller * VC =[[HHBaseWebViewcontroller alloc]init];
-            VC.url = modelTemp.url;
-            [self.navigationController pushViewController:VC animated:YES];
-        }
-    }];
     
 }
 - (void)didReceiveMemoryWarning {

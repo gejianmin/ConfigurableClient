@@ -7,7 +7,6 @@
 //
 
 #import "HHBaseWebViewcontroller.h"
-#import "UIWebView+load.h"
 
 @interface HHBaseWebViewcontroller () {
     
@@ -27,41 +26,41 @@
 -(void)setupUI{
     
 }
-- (void)setUrl:(NSString *)url
-{
-    _url = url;
-    if (url.length == 0) {
-        return;
-    }
-    if ([url hasPrefix:@"http"]) {
-        [self.webView loadURL:url];
-    } else {
-        @try {
-            [self.webView loadLocalWord:url];
-        } @catch (NSException *exception) {
-            NSLog(@"加载本地web异常");
-        } @finally {
-            
-        }
-        
-    }
-    
-}
-
-- (UIWebView *)webView
-{
-    if (!_webView) {
-        _webView = [[UIWebView alloc] init];
-        _webView.scalesPageToFit = YES;
-        [self.view addSubview:_webView];
-        [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
-        }];
-    }
-    //清楚cookies
-    [_webView clearCookies];
-    return _webView;
-}
+//- (void)setUrl:(NSString *)url
+//{
+//    _url = url;
+//    if (url.length == 0) {
+//        return;
+//    }
+//    if ([url hasPrefix:@"http"]) {
+//        [self.webView loadURL:url];
+//    } else {
+//        @try {
+//            [self.webView loadLocalWord:url];
+//        } @catch (NSException *exception) {
+//            NSLog(@"加载本地web异常");
+//        } @finally {
+//            
+//        }
+//        
+//    }
+//    
+//}
+//
+//- (UIWebView *)webView
+//{
+//    if (!_webView) {
+//        _webView = [[UIWebView alloc] init];
+//        _webView.scalesPageToFit = YES;
+//        [self.view addSubview:_webView];
+//        [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.edges.equalTo(self.view);
+//        }];
+//    }
+//    //清楚cookies
+//    [_webView clearCookies];
+//    return _webView;
+//}
 
 
 - (void)didReceiveMemoryWarning {
