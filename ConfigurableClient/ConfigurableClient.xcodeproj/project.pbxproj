@@ -22,7 +22,6 @@
 		373B850B1F417EC500F65132 /* HHBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B85091F417EC500F65132 /* HHBannerView.m */; };
 		373B850F1F42A2B100F65132 /* HeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B850E1F42A2B100F65132 /* HeaderModel.m */; };
 		373B85121F42C65800F65132 /* HHBaseWebViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B85111F42C65800F65132 /* HHBaseWebViewcontroller.m */; };
-		37645ED71F42E17E00734AA2 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37645ED61F42E17E00734AA2 /* HomeCell.m */; };
 		37A8A5131F2A028600F35513 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A50E1F2A028600F35513 /* MainViewController.m */; };
 		37A8A5141F2A028600F35513 /* HHTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A5121F2A028600F35513 /* HHTabbar.m */; };
 		37A8A51D1F2A041E00F35513 /* CRMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A51C1F2A041E00F35513 /* CRMBaseViewController.m */; };
@@ -33,6 +32,7 @@
 		37A8A53B1F2B065E00F35513 /* HHKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A8A5391F2B065E00F35513 /* HHKit.framework */; };
 		37A8A53C1F2B065E00F35513 /* HHSecurityNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A8A53A1F2B065E00F35513 /* HHSecurityNetwork.framework */; };
 		37A8A5491F2C32D200F35513 /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A5481F2C32D200F35513 /* UIView+RoundCorner.m */; };
+		A12655E51F42D0CD0080C609 /* UIWebView+Load.m in Sources */ = {isa = PBXBuildFile; fileRef = A12655E41F42D0CD0080C609 /* UIWebView+Load.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,8 +83,6 @@
 		373B850E1F42A2B100F65132 /* HeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderModel.m; sourceTree = "<group>"; };
 		373B85101F42C65800F65132 /* HHBaseWebViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseWebViewcontroller.h; sourceTree = "<group>"; };
 		373B85111F42C65800F65132 /* HHBaseWebViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseWebViewcontroller.m; sourceTree = "<group>"; };
-		37645ED51F42E17E00734AA2 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
-		37645ED61F42E17E00734AA2 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
 		37A8A50D1F2A028600F35513 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		37A8A50E1F2A028600F35513 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		37A8A5111F2A028600F35513 /* HHTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHTabbar.h; sourceTree = "<group>"; };
@@ -107,6 +105,8 @@
 		37A8A53A1F2B065E00F35513 /* HHSecurityNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HHSecurityNetwork.framework; path = "../../../Library/Developer/Xcode/DerivedData/ConfigurableClient-cmbujioeksjqvsfzvkxkwyqzqhyh/Build/Products/Debug-iphonesimulator/HHSecurityNetwork.framework"; sourceTree = "<group>"; };
 		37A8A5471F2C32D200F35513 /* UIView+RoundCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundCorner.h"; sourceTree = "<group>"; };
 		37A8A5481F2C32D200F35513 /* UIView+RoundCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundCorner.m"; sourceTree = "<group>"; };
+		A12655E31F42D0CD0080C609 /* UIWebView+load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+load.h"; sourceTree = "<group>"; };
+		A12655E41F42D0CD0080C609 /* UIWebView+Load.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Load.m"; sourceTree = "<group>"; };
 		CDE44F357B4D703570E877EA /* libPods-ConfigurableClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfigurableClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4117F52EED5B09B71A81FBC /* Pods-ConfigurableClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfigurableClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfigurableClient/Pods-ConfigurableClient.release.xcconfig"; sourceTree = "<group>"; };
 		EC8D9CE6EF6C7A03C42A9C40 /* Pods-ConfigurableClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfigurableClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfigurableClient/Pods-ConfigurableClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -278,8 +278,6 @@
 			children = (
 				373B85081F417EC500F65132 /* HHBannerView.h */,
 				373B85091F417EC500F65132 /* HHBannerView.m */,
-				37645ED51F42E17E00734AA2 /* HomeCell.h */,
-				37645ED61F42E17E00734AA2 /* HomeCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +285,8 @@
 		37A8A50C1F2A028600F35513 /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
+				A12655E31F42D0CD0080C609 /* UIWebView+load.h */,
+				A12655E41F42D0CD0080C609 /* UIWebView+Load.m */,
 				37A8A50D1F2A028600F35513 /* MainViewController.h */,
 				37A8A50E1F2A028600F35513 /* MainViewController.m */,
 				37A8A51B1F2A041E00F35513 /* CRMBaseViewController.h */,
@@ -566,11 +566,11 @@
 				37A8A52F1F2A0BA500F35513 /* JDNavigationController.m in Sources */,
 				3738FBF31F0C89CE008FE3C7 /* main.m in Sources */,
 				373B85011F417CE300F65132 /* ThirdViewController.m in Sources */,
+				A12655E51F42D0CD0080C609 /* UIWebView+Load.m in Sources */,
 				37A8A5221F2A09F800F35513 /* CustomBtn.m in Sources */,
 				373B84FF1F417CE300F65132 /* MyViewController.m in Sources */,
 				37A8A51D1F2A041E00F35513 /* CRMBaseViewController.m in Sources */,
 				373B85121F42C65800F65132 /* HHBaseWebViewcontroller.m in Sources */,
-				37645ED71F42E17E00734AA2 /* HomeCell.m in Sources */,
 				37A8A5131F2A028600F35513 /* MainViewController.m in Sources */,
 				37A8A5491F2C32D200F35513 /* UIView+RoundCorner.m in Sources */,
 				373B850A1F417EC500F65132 /* HomeViewController.m in Sources */,
