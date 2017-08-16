@@ -21,13 +21,13 @@ NSString *const kLoginFinishNotification=@"kLoginFinishNotification";
     
     _account=account;
     [[NSUserDefaults standardUserDefaults]setObject:account forKey:@"QWER_ASDF_ZXCV_PL"];
-
+    
 }
 -(NSString *)account{
     if (_account==nil) {
         return     [[NSUserDefaults standardUserDefaults]objectForKey:@"QWER_ASDF_ZXCV_PL"];
     }
-
+    
     return _account;
 }
 
@@ -59,7 +59,7 @@ NSString *const kLoginFinishNotification=@"kLoginFinishNotification";
             
             NSString *token=response[@"Data"][@"TokenId"];
             [HHClient sharedInstance].token=token;
-                        
+            
             self.account=phone;
             self.password=pwd;
             
@@ -87,12 +87,12 @@ NSString *const kLoginFinishNotification=@"kLoginFinishNotification";
             [HHClient sharedInstance].token=nil;
             [HHClient sharedInstance].user=nil;
             self.password=nil;
-
+            
             complete(response,nil);
         }else{
             complete(nil,error);
         }
-    
+        
     }];
     
     return task;
@@ -100,7 +100,7 @@ NSString *const kLoginFinishNotification=@"kLoginFinishNotification";
 }
 
 - (NSURLSessionDataTask *)asyncGetDetailInfocomplete:(HHSessionCompleteBlock)complete{
-
+    
     NSString *url=[self urlWithPath:kBangDetalisInfoPath];
     
     NSURLSessionDataTask *task=[self DATA:url params:nil complete:^(id response, HHError *error) {
@@ -118,7 +118,7 @@ NSString *const kLoginFinishNotification=@"kLoginFinishNotification";
     }];
     
     return task;
-
+    
 }
 
 
@@ -144,7 +144,7 @@ NSString *const kLoginFinishNotification=@"kLoginFinishNotification";
         }
     }];
     return task;
-
+    
 }
 - (NSURLSessionDataTask *)post:(NSString *)path params:(NSDictionary *)pramas  complete:(HHSessionCompleteBlock)complete{
     
@@ -153,44 +153,10 @@ NSString *const kLoginFinishNotification=@"kLoginFinishNotification";
     NSURLSessionDataTask *task=[self POST:path params:pramas HTTPHeader:@{@"Content-Type":@"application/json;charset=UTF-8"} complete:^(id response, HHError *error) {
         
         if (response) {
+            if (complete) {
+                complete(response,nil);
+            }
             
-//            NSString * code  = response[@"code"];
-//            switch ([code integerValue]) {
-//                case 20000:
-//                {
-                    if (complete) {
-                        complete(response,nil);
-                    }
-                    
-//                }
-//                    break;
-//                case 40001:
-//                {
-//                    NSLog(@"40001 --- 版本号不存在");
-//                }
-//                    break;
-//                case 50000:
-//                {
-//                    NSLog(@"50000 --- 处理请求时发生异常");
-//                }
-//                    break;
-//                case 50002:
-//                {
-//                    NSLog(@"50002 --- 参数格式错误");
-//                }
-//                    break;
-//                case 70000:
-//                {
-//                    NSLog(@"70000 --- 请求参数为空");
-//                }
-//                    break;
-//                    
-//                default:
-//                {
-//                    NSLog(@"unkonwn --- 未知错误");
-//                }
-//                    break;
-//            }
             
         }else{
             if (complete) {
@@ -201,8 +167,28 @@ NSString *const kLoginFinishNotification=@"kLoginFinishNotification";
         }
     }];
     return task;
-    
-    
 }
+- (NSURLSessionDataTask *)GET:(NSString *)path params:(NSDictionary *)pramas  complete:(HHSessionCompleteBlock)complete{
+
+    NSURLSessionDataTask *task=[self GET:path params:pramas HTTPHeader:@{@"Content-Type":@"application/json;charset=UTF-8"} complete:^(id response, HHError *error) {
+        
+        if (response) {
+            if (complete) {
+                complete(response,nil);
+            }
+            
+            
+        }else{
+            if (complete) {
+                complete(nil,error);
+            }
+            
+            
+        }
+    }];
+    return task;
+
+}
+
 
 @end

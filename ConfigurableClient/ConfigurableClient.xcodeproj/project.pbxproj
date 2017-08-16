@@ -34,6 +34,7 @@
 		37A8A53C1F2B065E00F35513 /* HHSecurityNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A8A53A1F2B065E00F35513 /* HHSecurityNetwork.framework */; };
 		37A8A5491F2C32D200F35513 /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A5481F2C32D200F35513 /* UIView+RoundCorner.m */; };
 		37C91C811F43EE6600145516 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C91C801F43EE6600145516 /* FourthViewController.m */; };
+		37C91C841F441E6000145516 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C91C831F441E6000145516 /* RootViewController.m */; };
 		A12655E51F42D0CD0080C609 /* UIWebView+Load.m in Sources */ = {isa = PBXBuildFile; fileRef = A12655E41F42D0CD0080C609 /* UIWebView+Load.m */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,8 @@
 		37A8A5481F2C32D200F35513 /* UIView+RoundCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundCorner.m"; sourceTree = "<group>"; };
 		37C91C7F1F43EE6600145516 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
 		37C91C801F43EE6600145516 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		37C91C821F441E6000145516 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		37C91C831F441E6000145516 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		A12655E31F42D0CD0080C609 /* UIWebView+load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+load.h"; sourceTree = "<group>"; };
 		A12655E41F42D0CD0080C609 /* UIWebView+Load.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Load.m"; sourceTree = "<group>"; };
 		CDE44F357B4D703570E877EA /* libPods-ConfigurableClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfigurableClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +308,8 @@
 				37A8A52E1F2A0BA500F35513 /* JDNavigationController.m */,
 				373B85101F42C65800F65132 /* HHBaseWebViewcontroller.h */,
 				373B85111F42C65800F65132 /* HHBaseWebViewcontroller.m */,
+				37C91C821F441E6000145516 /* RootViewController.h */,
+				37C91C831F441E6000145516 /* RootViewController.m */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -581,6 +586,7 @@
 				373B84FF1F417CE300F65132 /* MyViewController.m in Sources */,
 				37645EDA1F42F8FF00734AA2 /* HomeCell.m in Sources */,
 				37A8A51D1F2A041E00F35513 /* CRMBaseViewController.m in Sources */,
+				37C91C841F441E6000145516 /* RootViewController.m in Sources */,
 				373B85121F42C65800F65132 /* HHBaseWebViewcontroller.m in Sources */,
 				37A8A5131F2A028600F35513 /* MainViewController.m in Sources */,
 				37A8A5491F2C32D200F35513 /* UIView+RoundCorner.m in Sources */,

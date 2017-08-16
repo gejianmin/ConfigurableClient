@@ -41,5 +41,8 @@ extern  NSString *const   kLoginFinishNotification;
 
 - (NSURLSessionDataTask *)post:(NSString *)path params:(NSDictionary *)pramas  complete:(HHSessionCompleteBlock)complete;
 
+- (NSURLSessionDataTask *)GET:(NSString *)path params:(NSDictionary *)pramas  complete:(HHSessionCompleteBlock)complete;
+
+
 @end
 

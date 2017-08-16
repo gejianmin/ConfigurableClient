@@ -17,6 +17,8 @@ static NSString *const kNews_Feature = @"http://61.129.118.77/storyformobile/new
 static NSString *const kNews_HeadlineApi = @"http://61.129.118.77/storyformobile/newslist.ashx?sectionId=";
 static NSString *const kNews_HeadlineNewsId = @"http://61.129.118.77/storyformobile/newsDetail.ashx?newsId=";
 
-static NSString *const kCRMWorkTeleconferenceManage = @"http://f.apiplus.net/gd11x5-10.json";/*!< 会议管理*/
+static NSString *const kAppPath = @"itms-apps://itunes.apple.com/cn/app/id1249906874?mt=8";/*!< app*/
+static NSString *const kAppPathId = @"http://apns.push0001.com/getApi.jbm?app_id=1249906874";/*!< appPathId*/
+
 
 #endif /* HHAPIContantString_h */

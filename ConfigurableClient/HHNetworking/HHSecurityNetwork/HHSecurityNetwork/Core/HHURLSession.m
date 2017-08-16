@@ -172,13 +172,6 @@ HHList HHListMake(int pageIndex,int pageSize){
             [self.sessionManager.requestSerializer setValue:obj forHTTPHeaderField:key];
         }];
     }
-//    NSMutableDictionary * dic = [NSMutableDictionary dictionary];
-//    dic[@"version"]=@"V1.0";
-//    if (dict != nil) {
-//        dic[@"data"] = dict;
-//    }else{
-//        dic[@"data"] = @{ };
-//    }
 
     NSURLSessionDataTask *task=[self.sessionManager POST:url parameters:dict progress:^(NSProgress * _Nonnull downloadProgress) {
         
