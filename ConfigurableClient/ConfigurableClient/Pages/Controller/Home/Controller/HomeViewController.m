@@ -139,10 +139,10 @@
             NSMutableArray * titleArray = [NSMutableArray array];
             for (int i = 0; i < 4; i++) {
                 HeaderModel *model=self.dataSourceArray[i];
-                if (![model.image isEqualToString:@""]) {
+//                if (![model.image isEqualToString:@""]) {
                     [array addObject:model.image];
                     [titleArray addObject:model.title];
-                }
+//                }
             };
             [self setupUIWithimageArray:array titleArray:titleArray];
         }

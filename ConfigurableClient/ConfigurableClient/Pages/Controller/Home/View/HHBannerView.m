@@ -52,7 +52,7 @@
         if (bannerSourceType == 0) {
             self.imgView.image = [UIImage imageNamed:self.imgArr[currentPage]];
         }else if (bannerSourceType == 1) {
-            [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]];
+            [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]placeholderImage:ImageNamed(@"nullData_image")];
             self.titleLabel.text = self.titleArr[currentPage];
         }
 
@@ -83,7 +83,7 @@
     if (bannerSourceType == 0) {
         self.imgView.image = [UIImage imageNamed:self.imgArr[currentPage]];
     }else if (bannerSourceType == 1) {
-        [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]placeholderImage:ImageNamed(@"d")];
+        [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]placeholderImage:ImageNamed(@"nullData_image")];
         self.titleLabel.text = self.titleArr[currentPage];
     }
 }
@@ -127,7 +127,7 @@
     if (bannerSourceType == 0) {
         self.imgView.image = [UIImage imageNamed:self.imgArr[currentPage]];
     }else if (bannerSourceType == 1) {
-        [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]];
+        [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]placeholderImage:ImageNamed(@"nullData_image")];
         self.titleLabel.text = self.titleArr[currentPage];
 
     }
@@ -153,7 +153,7 @@
     if (bannerSourceType == 0) {
         self.imgView.image = [UIImage imageNamed:self.imgArr[currentPage]];
     }else if (bannerSourceType == 1) {
-        [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]];
+        [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]placeholderImage:ImageNamed(@"nullData_image")];
         self.titleLabel.text = self.titleArr[currentPage];
 
     }

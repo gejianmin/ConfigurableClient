@@ -66,20 +66,17 @@
             if (response) {
                 NSInteger code = [response[@"code"] integerValue];
                 if (code == 200) {
-                    
-                }else if (code == 400){
-                    HHLog(@"%@",response[@"message"]);
                     self.is_show_tip = YES;
                     RootViewController *VC = [[RootViewController alloc]init];
-                    VC.pathUrl = kAppPath;
+                    VC.pathUrl = response[@"url"];
                     [self.window setRootViewController:VC];
-                    return ;
+                    //                    return ;
+                }else if (code == 400){
+                    HHLog(@"%@",response[@"message"]);
                 };
             }
         }
-        [self.window setRootViewController:[self pickViewController]]
-        ;
+        [self.window setRootViewController:[self pickViewController]];
     }];
-    
 }
 @end
