@@ -36,6 +36,22 @@
 		37C91C811F43EE6600145516 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C91C801F43EE6600145516 /* FourthViewController.m */; };
 		37C91C841F441E6000145516 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C91C831F441E6000145516 /* RootViewController.m */; };
 		A12655E51F42D0CD0080C609 /* UIWebView+Load.m in Sources */ = {isa = PBXBuildFile; fileRef = A12655E41F42D0CD0080C609 /* UIWebView+Load.m */; };
+		A12656351F441E4F0080C609 /* MyBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A12656191F441E4F0080C609 /* MyBaseLayout.m */; };
+		A12656361F441E4F0080C609 /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A126561B1F441E4F0080C609 /* MyFlowLayout.m */; };
+		A12656371F441E4F0080C609 /* MyFrameLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A126561D1F441E4F0080C609 /* MyFrameLayout.m */; };
+		A12656381F441E4F0080C609 /* MyLayoutDime.m in Sources */ = {isa = PBXBuildFile; fileRef = A12656211F441E4F0080C609 /* MyLayoutDime.m */; };
+		A12656391F441E4F0080C609 /* MyLayoutMeasure.m in Sources */ = {isa = PBXBuildFile; fileRef = A12656251F441E4F0080C609 /* MyLayoutMeasure.m */; };
+		A126563A1F441E4F0080C609 /* MyLayoutPos.m in Sources */ = {isa = PBXBuildFile; fileRef = A12656271F441E4F0080C609 /* MyLayoutPos.m */; };
+		A126563B1F441E4F0080C609 /* MyLayoutSizeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A126562A1F441E4F0080C609 /* MyLayoutSizeClass.m */; };
+		A126563C1F441E4F0080C609 /* MyLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A126562C1F441E4F0080C609 /* MyLinearLayout.m */; };
+		A126563D1F441E4F0080C609 /* MyMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A126562E1F441E4F0080C609 /* MyMaker.m */; };
+		A126563E1F441E4F0080C609 /* MyRelativeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A12656301F441E4F0080C609 /* MyRelativeLayout.m */; };
+		A126563F1F441E4F0080C609 /* MyTableLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A12656321F441E4F0080C609 /* MyTableLayout.m */; };
+		A12656401F441E4F0080C609 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A12656331F441E4F0080C609 /* README.md */; };
+		A12656431F4430A30080C609 /* NSDate+ZD.m in Sources */ = {isa = PBXBuildFile; fileRef = A12656421F4430A30080C609 /* NSDate+ZD.m */; };
+		A12656491F4434D80080C609 /* AutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A12656461F4434D80080C609 /* AutoScrollLabel.m */; };
+		A126564A1F4434D80080C609 /* ZDLabelScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A12656481F4434D80080C609 /* ZDLabelScrollView.m */; };
+		A126564D1F4435C50080C609 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = A126564C1F4435C50080C609 /* NSString+Size.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +132,42 @@
 		37C91C831F441E6000145516 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		A12655E31F42D0CD0080C609 /* UIWebView+load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+load.h"; sourceTree = "<group>"; };
 		A12655E41F42D0CD0080C609 /* UIWebView+Load.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Load.m"; sourceTree = "<group>"; };
+		A12656181F441E4F0080C609 /* MyBaseLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBaseLayout.h; sourceTree = "<group>"; };
+		A12656191F441E4F0080C609 /* MyBaseLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBaseLayout.m; sourceTree = "<group>"; };
+		A126561A1F441E4F0080C609 /* MyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFlowLayout.h; sourceTree = "<group>"; };
+		A126561B1F441E4F0080C609 /* MyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFlowLayout.m; sourceTree = "<group>"; };
+		A126561C1F441E4F0080C609 /* MyFrameLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFrameLayout.h; sourceTree = "<group>"; };
+		A126561D1F441E4F0080C609 /* MyFrameLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFrameLayout.m; sourceTree = "<group>"; };
+		A126561E1F441E4F0080C609 /* MyLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayout.h; sourceTree = "<group>"; };
+		A126561F1F441E4F0080C609 /* MyLayoutDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutDef.h; sourceTree = "<group>"; };
+		A12656201F441E4F0080C609 /* MyLayoutDime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutDime.h; sourceTree = "<group>"; };
+		A12656211F441E4F0080C609 /* MyLayoutDime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutDime.m; sourceTree = "<group>"; };
+		A12656221F441E4F0080C609 /* MyLayoutDimeInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutDimeInner.h; sourceTree = "<group>"; };
+		A12656231F441E4F0080C609 /* MyLayoutInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutInner.h; sourceTree = "<group>"; };
+		A12656241F441E4F0080C609 /* MyLayoutMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutMeasure.h; sourceTree = "<group>"; };
+		A12656251F441E4F0080C609 /* MyLayoutMeasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutMeasure.m; sourceTree = "<group>"; };
+		A12656261F441E4F0080C609 /* MyLayoutPos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutPos.h; sourceTree = "<group>"; };
+		A12656271F441E4F0080C609 /* MyLayoutPos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutPos.m; sourceTree = "<group>"; };
+		A12656281F441E4F0080C609 /* MyLayoutPosInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutPosInner.h; sourceTree = "<group>"; };
+		A12656291F441E4F0080C609 /* MyLayoutSizeClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLayoutSizeClass.h; sourceTree = "<group>"; };
+		A126562A1F441E4F0080C609 /* MyLayoutSizeClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLayoutSizeClass.m; sourceTree = "<group>"; };
+		A126562B1F441E4F0080C609 /* MyLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLinearLayout.h; sourceTree = "<group>"; };
+		A126562C1F441E4F0080C609 /* MyLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLinearLayout.m; sourceTree = "<group>"; };
+		A126562D1F441E4F0080C609 /* MyMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMaker.h; sourceTree = "<group>"; };
+		A126562E1F441E4F0080C609 /* MyMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMaker.m; sourceTree = "<group>"; };
+		A126562F1F441E4F0080C609 /* MyRelativeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRelativeLayout.h; sourceTree = "<group>"; };
+		A12656301F441E4F0080C609 /* MyRelativeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRelativeLayout.m; sourceTree = "<group>"; };
+		A12656311F441E4F0080C609 /* MyTableLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableLayout.h; sourceTree = "<group>"; };
+		A12656321F441E4F0080C609 /* MyTableLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableLayout.m; sourceTree = "<group>"; };
+		A12656331F441E4F0080C609 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A12656411F4430A30080C609 /* NSDate+ZD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZD.h"; sourceTree = "<group>"; };
+		A12656421F4430A30080C609 /* NSDate+ZD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZD.m"; sourceTree = "<group>"; };
+		A12656451F4434D80080C609 /* AutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoScrollLabel.h; sourceTree = "<group>"; };
+		A12656461F4434D80080C609 /* AutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoScrollLabel.m; sourceTree = "<group>"; };
+		A12656471F4434D80080C609 /* ZDLabelScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDLabelScrollView.h; sourceTree = "<group>"; };
+		A12656481F4434D80080C609 /* ZDLabelScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDLabelScrollView.m; sourceTree = "<group>"; };
+		A126564B1F4435C50080C609 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		A126564C1F4435C50080C609 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		CDE44F357B4D703570E877EA /* libPods-ConfigurableClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfigurableClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4117F52EED5B09B71A81FBC /* Pods-ConfigurableClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfigurableClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfigurableClient/Pods-ConfigurableClient.release.xcconfig"; sourceTree = "<group>"; };
 		EC8D9CE6EF6C7A03C42A9C40 /* Pods-ConfigurableClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfigurableClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfigurableClient/Pods-ConfigurableClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +227,7 @@
 		3738FBF01F0C89CE008FE3C7 /* ConfigurableClient */ = {
 			isa = PBXGroup;
 			children = (
+				A12656131F441E290080C609 /* Vender */,
 				37A8A5151F2A030800F35513 /* Config */,
 				3738FC241F0C8A0F008FE3C7 /* Pages */,
 				3738FDB71F0C971A008FE3C7 /* Base */,
@@ -360,6 +413,81 @@
 				CDE44F357B4D703570E877EA /* libPods-ConfigurableClient.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A12656131F441E290080C609 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				A12656441F4434D80080C609 /* RunLabel */,
+				A12656141F441E4F0080C609 /* MyLayout */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		A12656141F441E4F0080C609 /* MyLayout */ = {
+			isa = PBXGroup;
+			children = (
+				A12656161F441E4F0080C609 /* MyLayout */,
+				A12656331F441E4F0080C609 /* README.md */,
+				A12656411F4430A30080C609 /* NSDate+ZD.h */,
+				A12656421F4430A30080C609 /* NSDate+ZD.m */,
+				A126564B1F4435C50080C609 /* NSString+Size.h */,
+				A126564C1F4435C50080C609 /* NSString+Size.m */,
+			);
+			path = MyLayout;
+			sourceTree = "<group>";
+		};
+		A12656161F441E4F0080C609 /* MyLayout */ = {
+			isa = PBXGroup;
+			children = (
+				A12656171F441E4F0080C609 /* Lib */,
+			);
+			path = MyLayout;
+			sourceTree = "<group>";
+		};
+		A12656171F441E4F0080C609 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				A12656181F441E4F0080C609 /* MyBaseLayout.h */,
+				A12656191F441E4F0080C609 /* MyBaseLayout.m */,
+				A126561A1F441E4F0080C609 /* MyFlowLayout.h */,
+				A126561B1F441E4F0080C609 /* MyFlowLayout.m */,
+				A126561C1F441E4F0080C609 /* MyFrameLayout.h */,
+				A126561D1F441E4F0080C609 /* MyFrameLayout.m */,
+				A126561E1F441E4F0080C609 /* MyLayout.h */,
+				A126561F1F441E4F0080C609 /* MyLayoutDef.h */,
+				A12656201F441E4F0080C609 /* MyLayoutDime.h */,
+				A12656211F441E4F0080C609 /* MyLayoutDime.m */,
+				A12656221F441E4F0080C609 /* MyLayoutDimeInner.h */,
+				A12656231F441E4F0080C609 /* MyLayoutInner.h */,
+				A12656241F441E4F0080C609 /* MyLayoutMeasure.h */,
+				A12656251F441E4F0080C609 /* MyLayoutMeasure.m */,
+				A12656261F441E4F0080C609 /* MyLayoutPos.h */,
+				A12656271F441E4F0080C609 /* MyLayoutPos.m */,
+				A12656281F441E4F0080C609 /* MyLayoutPosInner.h */,
+				A12656291F441E4F0080C609 /* MyLayoutSizeClass.h */,
+				A126562A1F441E4F0080C609 /* MyLayoutSizeClass.m */,
+				A126562B1F441E4F0080C609 /* MyLinearLayout.h */,
+				A126562C1F441E4F0080C609 /* MyLinearLayout.m */,
+				A126562D1F441E4F0080C609 /* MyMaker.h */,
+				A126562E1F441E4F0080C609 /* MyMaker.m */,
+				A126562F1F441E4F0080C609 /* MyRelativeLayout.h */,
+				A12656301F441E4F0080C609 /* MyRelativeLayout.m */,
+				A12656311F441E4F0080C609 /* MyTableLayout.h */,
+				A12656321F441E4F0080C609 /* MyTableLayout.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		A12656441F4434D80080C609 /* RunLabel */ = {
+			isa = PBXGroup;
+			children = (
+				A12656451F4434D80080C609 /* AutoScrollLabel.h */,
+				A12656461F4434D80080C609 /* AutoScrollLabel.m */,
+				A12656471F4434D80080C609 /* ZDLabelScrollView.h */,
+				A12656481F4434D80080C609 /* ZDLabelScrollView.m */,
+			);
+			path = RunLabel;
 			sourceTree = "<group>";
 		};
 		B96F017C869D2E111641ECEF /* Pods */ = {
@@ -572,24 +700,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12656351F441E4F0080C609 /* MyBaseLayout.m in Sources */,
 				373B850B1F417EC500F65132 /* HHBannerView.m in Sources */,
+				A12656391F441E4F0080C609 /* MyLayoutMeasure.m in Sources */,
 				37A8A5231F2A09F800F35513 /* CustomLab.m in Sources */,
+				A126564D1F4435C50080C609 /* NSString+Size.m in Sources */,
+				A12656401F441E4F0080C609 /* README.md in Sources */,
 				373B850F1F42A2B100F65132 /* HeaderModel.m in Sources */,
+				A126563B1F441E4F0080C609 /* MyLayoutSizeClass.m in Sources */,
 				373B85001F417CE300F65132 /* SecondViewController.m in Sources */,
 				3738FBF61F0C89CE008FE3C7 /* AppDelegate.m in Sources */,
+				A12656361F441E4F0080C609 /* MyFlowLayout.m in Sources */,
 				37A8A5141F2A028600F35513 /* HHTabbar.m in Sources */,
+				A126563A1F441E4F0080C609 /* MyLayoutPos.m in Sources */,
 				37A8A52F1F2A0BA500F35513 /* JDNavigationController.m in Sources */,
 				3738FBF31F0C89CE008FE3C7 /* main.m in Sources */,
+				A126564A1F4434D80080C609 /* ZDLabelScrollView.m in Sources */,
+				A12656431F4430A30080C609 /* NSDate+ZD.m in Sources */,
+				A12656381F441E4F0080C609 /* MyLayoutDime.m in Sources */,
+				A126563D1F441E4F0080C609 /* MyMaker.m in Sources */,
 				373B85011F417CE300F65132 /* ThirdViewController.m in Sources */,
 				A12655E51F42D0CD0080C609 /* UIWebView+Load.m in Sources */,
+				A12656491F4434D80080C609 /* AutoScrollLabel.m in Sources */,
 				37A8A5221F2A09F800F35513 /* CustomBtn.m in Sources */,
 				373B84FF1F417CE300F65132 /* MyViewController.m in Sources */,
 				37645EDA1F42F8FF00734AA2 /* HomeCell.m in Sources */,
+				A126563E1F441E4F0080C609 /* MyRelativeLayout.m in Sources */,
+				A12656371F441E4F0080C609 /* MyFrameLayout.m in Sources */,
+				A126563F1F441E4F0080C609 /* MyTableLayout.m in Sources */,
 				37A8A51D1F2A041E00F35513 /* CRMBaseViewController.m in Sources */,
 				37C91C841F441E6000145516 /* RootViewController.m in Sources */,
 				373B85121F42C65800F65132 /* HHBaseWebViewcontroller.m in Sources */,
 				37A8A5131F2A028600F35513 /* MainViewController.m in Sources */,
 				37A8A5491F2C32D200F35513 /* UIView+RoundCorner.m in Sources */,
+				A126563C1F441E4F0080C609 /* MyLinearLayout.m in Sources */,
 				373B850A1F417EC500F65132 /* HomeViewController.m in Sources */,
 				37C91C811F43EE6600145516 /* FourthViewController.m in Sources */,
 			);
