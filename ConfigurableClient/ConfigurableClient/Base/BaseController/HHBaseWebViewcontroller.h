@@ -8,10 +8,11 @@
 
 #import "CRMBaseViewController.h"
 
-
+@class HeaderModel;
 @interface HHBaseWebViewcontroller : CRMBaseViewController
 
 @property (nonatomic, strong) NSString* url;
+@property (nonatomic, strong) HeaderModel *dataModel;
 
 @end
 

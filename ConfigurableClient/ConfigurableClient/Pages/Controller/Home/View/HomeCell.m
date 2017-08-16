@@ -53,7 +53,7 @@
 }
 -(void)setHeaderModel:(HeaderModel *)headerModel{
     _headerModel = headerModel;
-    [self.iconIma sd_setImageWithURL:[NSURL URLWithString:_headerModel.image] placeholderImage:ImageNamed(@"")];
+    [self.iconIma sd_setImageWithURL:[NSURL URLWithString:_headerModel.image] placeholderImage:ImageNamed(@"nullData_image")];
     self.titleLbl.text = _headerModel.title;
     self.contentLbl.text = _headerModel.Summary;
     self.dateLbl.text = _headerModel.date;

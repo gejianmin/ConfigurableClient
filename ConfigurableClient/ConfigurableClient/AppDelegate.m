@@ -22,7 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.is_show_tip = YES;
+    self.is_show_tip = NO;
     if (self.is_show_tip) {
     }else{
         [self.window setRootViewController:[self pickViewController]];

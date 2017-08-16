@@ -17,6 +17,10 @@
 @property (nonatomic, strong) NSString * title;/*!< 标题*/
 @property (nonatomic, strong) NSString * image;/*!< 图片*/
 @property (nonatomic, strong) NSString * url;/*!< 链接*/
+@property (nonatomic, strong) NSArray * images;/*!< 图片数组*/
+@property (nonatomic, strong) NSString * caption;/*!< 简言*/
+@property (nonatomic, strong) NSString * content;/*!< 内容*/
+ 
 
 
 

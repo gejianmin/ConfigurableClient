@@ -25,10 +25,15 @@
 
 @implementation HomeViewController
 
+- (void)setNewsCategoryType:(NewsCategoryType)newsCategoryType {
+    _newsCategoryType = newsCategoryType;
+    [self configDataSource];
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configDataSource];
+//    [self configDataSource];
     [self initUI];
     self.newsCategoryType = kNewsCategoryTypeHeadline;
 }
@@ -86,6 +91,7 @@
             HeaderModel * modelTemp = [list firstObject];
             HHBaseWebViewcontroller * VC =[[HHBaseWebViewcontroller alloc]init];
             VC.url = modelTemp.url;
+            VC.dataModel = modelTemp;
             [self.navigationController pushViewController:VC animated:YES];
         }
     }];
@@ -103,6 +109,7 @@
             HeaderModel * modelTemp = [list firstObject];
             HHBaseWebViewcontroller * VC =[[HHBaseWebViewcontroller alloc]init];
             VC.url = modelTemp.url;
+            VC.dataModel = modelTemp;
             [self.navigationController pushViewController:VC animated:YES];
         }
     }];
