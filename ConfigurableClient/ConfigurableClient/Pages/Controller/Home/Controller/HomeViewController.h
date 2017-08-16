@@ -8,6 +8,15 @@
 
 #import "CRMBaseViewController.h"
 
+typedef NS_ENUM(NSUInteger, NewsCategoryType) {
+    kNewsCategoryTypeHeadline = 0,
+    kNewsCategoryTypeBusiness = 2,
+    kNewsCategoryTypeWorld = 3,
+    kNewsCategoryTypeSport = 6,
+    kNewsCategoryTypeFeature = 7,
+};
 @interface HomeViewController : CRMBaseViewController
+
+@property (nonatomic, assign) NewsCategoryType  newsCategoryType;
 
 @end

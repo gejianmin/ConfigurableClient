@@ -10,6 +10,7 @@
 #import "HomeViewController.h"
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
+#import "FourthViewController.h"
 #import "MyViewController.h"
 #import "JDNavigationController.h"
 @interface MainViewController ()<HHTabBarDelegate,UINavigationControllerDelegate>{
@@ -70,15 +71,23 @@
     vc3.tabBarItem.image=[UIImage imageNamed:@"tabbar_work_n"];
     vc3.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_work_s"];
     
+    FourthViewController * vc4 = [[FourthViewController alloc] init];
+    vc4.title=@"Feature";
+    vc4.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Feature" image:nil tag:3];
+    vc4.tabBarItem.image=[UIImage imageNamed:@"tabbar_work_n"];
+    vc4.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_work_s"];
+
+    
     MyViewController *exchange=[[MyViewController alloc] init];
     exchange.title=@"Sport";
-    exchange.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Sport" image:nil tag:3];
+    exchange.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Sport" image:nil tag:4];
     exchange.tabBarItem.image=[UIImage imageNamed:@"tabbar_my_n"];
     exchange.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_my_s"];
     
     [self addChildViewController:home];
     [self addChildViewController:service];
     [self addChildViewController:vc3];
+    [self addChildViewController:vc4];
     [self addChildViewController:exchange];
     self.tabBar.hidden=YES;
     
@@ -86,7 +95,7 @@
     _hhTabBar.delegate=self;
     _hhTabBar.frame=CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 50);
     _hhTabBar.tintColor=HEXCOLOR(0x1a78e3, 1);
-    _hhTabBar.items=@[home.tabBarItem,service.tabBarItem,vc3.tabBarItem,exchange.tabBarItem];
+    _hhTabBar.items=@[home.tabBarItem,service.tabBarItem,vc3.tabBarItem,vc4.tabBarItem,exchange.tabBarItem];
     _hhTabBar.selectedItem=home.tabBarItem;
     
     [self.view addSubview:_hhTabBar];

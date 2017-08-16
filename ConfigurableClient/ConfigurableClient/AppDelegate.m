@@ -12,6 +12,9 @@
 #import "JDNavigationController.h"
 @interface AppDelegate ()
 
+{}
+@property (nonatomic, assign) BOOL  is_show_tip;
+
 @end
 
 @implementation AppDelegate
@@ -19,7 +22,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [self.window setRootViewController:[self pickViewController]];
+    self.is_show_tip = YES;
+    if (self.is_show_tip) {
+    }else{
+        [self.window setRootViewController:[self pickViewController]];
+    
+    }
     
     
     

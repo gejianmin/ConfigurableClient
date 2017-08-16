@@ -30,6 +30,7 @@
     [super viewDidLoad];
     [self configDataSource];
     [self initUI];
+    self.newsCategoryType = kNewsCategoryTypeHeadline;
 }
 -(void)initUI{
     _pageSize=10;
@@ -109,7 +110,9 @@
 }
 -(void)configDataSource{
     [self showHUDText:nil];
-    [[[HHClient sharedInstance] sessionManager] post:kNews_Headline params:nil complete:^(id response, HHError *error) {
+    NSString * newsApi = [NSString stringWithFormat:@"%@%lu",kNews_HeadlineApi,(unsigned long)self.newsCategoryType];
+
+    [[[HHClient sharedInstance] sessionManager] post:newsApi params:nil complete:^(id response, HHError *error) {
         [self hideHUD];
         [self.tableView.mj_header endRefreshing];
 
