@@ -22,6 +22,7 @@
 		373B850B1F417EC500F65132 /* HHBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B85091F417EC500F65132 /* HHBannerView.m */; };
 		373B850F1F42A2B100F65132 /* HeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B850E1F42A2B100F65132 /* HeaderModel.m */; };
 		373B85121F42C65800F65132 /* HHBaseWebViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B85111F42C65800F65132 /* HHBaseWebViewcontroller.m */; };
+		37645EDA1F42F8FF00734AA2 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37645ED91F42F8FF00734AA2 /* HomeCell.m */; };
 		37A8A5131F2A028600F35513 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A50E1F2A028600F35513 /* MainViewController.m */; };
 		37A8A5141F2A028600F35513 /* HHTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A5121F2A028600F35513 /* HHTabbar.m */; };
 		37A8A51D1F2A041E00F35513 /* CRMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A51C1F2A041E00F35513 /* CRMBaseViewController.m */; };
@@ -83,6 +84,8 @@
 		373B850E1F42A2B100F65132 /* HeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderModel.m; sourceTree = "<group>"; };
 		373B85101F42C65800F65132 /* HHBaseWebViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseWebViewcontroller.h; sourceTree = "<group>"; };
 		373B85111F42C65800F65132 /* HHBaseWebViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseWebViewcontroller.m; sourceTree = "<group>"; };
+		37645ED81F42F8FF00734AA2 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		37645ED91F42F8FF00734AA2 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
 		37A8A50D1F2A028600F35513 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		37A8A50E1F2A028600F35513 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		37A8A5111F2A028600F35513 /* HHTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHTabbar.h; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 		373B85071F417EC500F65132 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37645ED81F42F8FF00734AA2 /* HomeCell.h */,
+				37645ED91F42F8FF00734AA2 /* HomeCell.m */,
 				373B85081F417EC500F65132 /* HHBannerView.h */,
 				373B85091F417EC500F65132 /* HHBannerView.m */,
 			);
@@ -569,6 +574,7 @@
 				A12655E51F42D0CD0080C609 /* UIWebView+Load.m in Sources */,
 				37A8A5221F2A09F800F35513 /* CustomBtn.m in Sources */,
 				373B84FF1F417CE300F65132 /* MyViewController.m in Sources */,
+				37645EDA1F42F8FF00734AA2 /* HomeCell.m in Sources */,
 				37A8A51D1F2A041E00F35513 /* CRMBaseViewController.m in Sources */,
 				373B85121F42C65800F65132 /* HHBaseWebViewcontroller.m in Sources */,
 				37A8A5131F2A028600F35513 /* MainViewController.m in Sources */,

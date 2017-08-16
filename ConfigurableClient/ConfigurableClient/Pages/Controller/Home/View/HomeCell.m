@@ -14,7 +14,7 @@
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self.contentView addSubview:self.titleLbl];
         [self.contentView addSubview:self.dateLbl];
         [self.contentView addSubview:self.contentLbl];

@@ -44,8 +44,8 @@
         self.imgView.userInteractionEnabled = YES;
         //标题
         UIView * bgView = [[UIView alloc]initWithFrame:CGRectMake(0, frame.size.height-30, frame.size.width, 30) color:HEXCOLOR(0x000000,0.6)];
-        [self addSubview:bgView];
-        self.titleLabel = [[CustomLab alloc]initWithFrame:CGRectMake(0, frame.size.height-25, frame.size.width-50, 20) font:15.0 aligment:NSTextAlignmentLeft text:self.titleArr[0] textcolor:[UIColor whiteColor]];
+        [self.imgView addSubview:bgView];
+        self.titleLabel = [[CustomLab alloc]initWithFrame:CGRectMake(0, frame.size.height-25, frame.size.width-100, 20) font:15.0 aligment:NSTextAlignmentLeft text:self.titleArr[0] textcolor:[UIColor whiteColor]];
         self.titleLabel.numberOfLines = 0;
         [self addSubview:self.titleLabel];
 
@@ -83,7 +83,7 @@
     if (bannerSourceType == 0) {
         self.imgView.image = [UIImage imageNamed:self.imgArr[currentPage]];
     }else if (bannerSourceType == 1) {
-        [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]];
+        [ self.imgView sd_setImageWithURL:[NSURL URLWithString:self.imgArr[currentPage]]placeholderImage:ImageNamed(@"d")];
         self.titleLabel.text = self.titleArr[currentPage];
     }
 }

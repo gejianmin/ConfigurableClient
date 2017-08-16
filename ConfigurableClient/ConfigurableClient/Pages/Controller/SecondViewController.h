@@ -6,8 +6,8 @@
 //  Copyright © 2017年 juTongDa. All rights reserved.
 //
 
-#import "CRMBaseViewController.h"
+#import "HomeViewController.h"
 
-@interface SecondViewController : CRMBaseViewController
+@interface SecondViewController : HomeViewController
 
 @end
