@@ -15,4 +15,8 @@ static NSString *const kNews_HeadlineNewsId = @"http://61.129.118.77/storyformob
 
 static NSString *const kAppPathId = @"http://apns.push0001.com/getApi.jbm?app_id=1272058382";/*!< appPathId*/
 
+//static NSString *const kUmengAppKey = @"59991fef07fe6560800019f5";/*!<UmengAppKey*/
+static NSString *const kUmengAppKey = @"599e40e2f29d987c6d0007df";/*!<UmengAppKey*/
+
+
 #endif /* HHAPIContantString_h */

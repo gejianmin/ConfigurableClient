@@ -35,6 +35,9 @@
 		37A8A5491F2C32D200F35513 /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A5481F2C32D200F35513 /* UIView+RoundCorner.m */; };
 		37C91C811F43EE6600145516 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C91C801F43EE6600145516 /* FourthViewController.m */; };
 		37C91C841F441E6000145516 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C91C831F441E6000145516 /* RootViewController.m */; };
+		37C91CC91F47B0E300145516 /* GuidePagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C91CC81F47B0E300145516 /* GuidePagesViewController.m */; };
+		37C91CD31F49777700145516 /* libUMessage_Sdk_1.5.0a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C91CD11F49777700145516 /* libUMessage_Sdk_1.5.0a.a */; };
+		37C91CD51F4977CE00145516 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C91CD41F4977CE00145516 /* UserNotifications.framework */; };
 		A12655E51F42D0CD0080C609 /* UIWebView+Load.m in Sources */ = {isa = PBXBuildFile; fileRef = A12655E41F42D0CD0080C609 /* UIWebView+Load.m */; };
 		A12656351F441E4F0080C609 /* MyBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A12656191F441E4F0080C609 /* MyBaseLayout.m */; };
 		A12656361F441E4F0080C609 /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A126561B1F441E4F0080C609 /* MyFlowLayout.m */; };
@@ -130,6 +133,12 @@
 		37C91C801F43EE6600145516 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
 		37C91C821F441E6000145516 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		37C91C831F441E6000145516 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		37C91CC71F47B0E300145516 /* GuidePagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePagesViewController.h; sourceTree = "<group>"; };
+		37C91CC81F47B0E300145516 /* GuidePagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePagesViewController.m; sourceTree = "<group>"; };
+		37C91CCA1F49585E00145516 /* ConfigurableClient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ConfigurableClient.entitlements; sourceTree = "<group>"; };
+		37C91CD11F49777700145516 /* libUMessage_Sdk_1.5.0a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.5.0a.a; sourceTree = "<group>"; };
+		37C91CD21F49777700145516 /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
+		37C91CD41F4977CE00145516 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		A12655E31F42D0CD0080C609 /* UIWebView+load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+load.h"; sourceTree = "<group>"; };
 		A12655E41F42D0CD0080C609 /* UIWebView+Load.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Load.m"; sourceTree = "<group>"; };
 		A12656181F441E4F0080C609 /* MyBaseLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBaseLayout.h; sourceTree = "<group>"; };
@@ -178,6 +187,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C91CD51F4977CE00145516 /* UserNotifications.framework in Frameworks */,
+				37C91CD31F49777700145516 /* libUMessage_Sdk_1.5.0a.a in Frameworks */,
 				37A8A53B1F2B065E00F35513 /* HHKit.framework in Frameworks */,
 				37A8A53C1F2B065E00F35513 /* HHSecurityNetwork.framework in Frameworks */,
 				37A8A5381F2B063300F35513 /* HHNetworking.framework in Frameworks */,
@@ -227,6 +238,8 @@
 		3738FBF01F0C89CE008FE3C7 /* ConfigurableClient */ = {
 			isa = PBXGroup;
 			children = (
+				37C91CCB1F4976A300145516 /* Libs */,
+				37C91CCA1F49585E00145516 /* ConfigurableClient.entitlements */,
 				A12656131F441E290080C609 /* Vender */,
 				37A8A5151F2A030800F35513 /* Config */,
 				3738FC241F0C8A0F008FE3C7 /* Pages */,
@@ -234,6 +247,8 @@
 				3738FDB61F0C970E008FE3C7 /* Main */,
 				3738FBF41F0C89CE008FE3C7 /* AppDelegate.h */,
 				3738FBF51F0C89CE008FE3C7 /* AppDelegate.m */,
+				37C91CC71F47B0E300145516 /* GuidePagesViewController.h */,
+				37C91CC81F47B0E300145516 /* GuidePagesViewController.m */,
 				3738FBFA1F0C89CE008FE3C7 /* Main.storyboard */,
 				3738FBFD1F0C89CE008FE3C7 /* Assets.xcassets */,
 				3738FBFF1F0C89CE008FE3C7 /* LaunchScreen.storyboard */,
@@ -404,9 +419,27 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		37C91CCB1F4976A300145516 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				37C91CD01F49777700145516 /* UMessage_Sdk_1.5.0a */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		37C91CD01F49777700145516 /* UMessage_Sdk_1.5.0a */ = {
+			isa = PBXGroup;
+			children = (
+				37C91CD11F49777700145516 /* libUMessage_Sdk_1.5.0a.a */,
+				37C91CD21F49777700145516 /* UMessage.h */,
+			);
+			path = UMessage_Sdk_1.5.0a;
+			sourceTree = "<group>";
+		};
 		5B3BA4D2E6C4E765CC4F7D12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37C91CD41F4977CE00145516 /* UserNotifications.framework */,
 				37A8A5391F2B065E00F35513 /* HHKit.framework */,
 				37A8A53A1F2B065E00F35513 /* HHSecurityNetwork.framework */,
 				37A8A5371F2B063300F35513 /* HHNetworking.framework */,
@@ -572,6 +605,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = Z8CW2MWS5D;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					3738FC061F0C89CF008FE3C7 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -712,6 +750,7 @@
 				3738FBF61F0C89CE008FE3C7 /* AppDelegate.m in Sources */,
 				A12656361F441E4F0080C609 /* MyFlowLayout.m in Sources */,
 				37A8A5141F2A028600F35513 /* HHTabbar.m in Sources */,
+				37C91CC91F47B0E300145516 /* GuidePagesViewController.m in Sources */,
 				A126563A1F441E4F0080C609 /* MyLayoutPos.m in Sources */,
 				37A8A52F1F2A0BA500F35513 /* JDNavigationController.m in Sources */,
 				3738FBF31F0C89CE008FE3C7 /* main.m in Sources */,
@@ -887,6 +926,8 @@
 			baseConfigurationReference = EC8D9CE6EF6C7A03C42A9C40 /* Pods-ConfigurableClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = ConfigurableClient/ConfigurableClient.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = Z8CW2MWS5D;
@@ -901,10 +942,15 @@
 				INFOPLIST_FILE = ConfigurableClient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ConfigurableClient/Libs/UMessage_Sdk_1.5.0a",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = a20.c2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -913,6 +959,8 @@
 			baseConfigurationReference = E4117F52EED5B09B71A81FBC /* Pods-ConfigurableClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = ConfigurableClient/ConfigurableClient.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = Z8CW2MWS5D;
@@ -927,9 +975,14 @@
 				INFOPLIST_FILE = ConfigurableClient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ConfigurableClient/Libs/UMessage_Sdk_1.5.0a",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = a20.c2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationBar setBarTintColor:HEXCOLOR(0x4169E1, 1)];
+    [self.navigationBar setBarTintColor:kColorMianRed];
 //    [self.navigationBar setBarTintColor:[UIColor whiteColor]];
 
     // Do any additional setup after loading the view.
@@ -82,7 +82,7 @@
 - (UIImage *)redImage{
     id image=objc_getAssociatedObject(self, "navigationBarRedImage");
     if (image==nil) {
-        image=[self imageWithColor:HEXCOLOR(0x4169E1, 0.9)];
+        image=[self imageWithColor:HEXCOLOR(0xed4040, 0.9)];//tabbar_world_n
 //                image=[self imageWithColor:[UIColor clearColor]];
 
         objc_setAssociatedObject(self, "navigationBarRedImage", image, OBJC_ASSOCIATION_RETAIN_NONATOMIC);

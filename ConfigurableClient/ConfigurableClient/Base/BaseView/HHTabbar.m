@@ -46,8 +46,8 @@
         [drbtn setTitle:self.items[i].title forState:UIControlStateNormal];
         
         [drbtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        [drbtn setTitleColor:HEXCOLOR(0x1a78e3, 1) forState:UIControlStateSelected];
-        [drbtn setTitleColor:HEXCOLOR(0x1a78e3, 1) forState:UIControlStateHighlighted];
+        [drbtn setTitleColor:kColorMianRed forState:UIControlStateSelected];
+        [drbtn setTitleColor:kColorMianRed forState:UIControlStateHighlighted];
         
         drbtn.titleLabel.font=[UIFont systemFontOfSize:11];
         drbtn.titleLabel.textAlignment=NSTextAlignmentCenter;

@@ -954,6 +954,7 @@
 		4AD069AB9313181A562999DC8EBD11B1 /* GPUImageOverlayBlendFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPUImageOverlayBlendFilter.h; path = framework/Source/GPUImageOverlayBlendFilter.h; sourceTree = "<group>"; };
 		4ADF51AACFA70CF833C99F5C0F16213D /* GPUImageHighlightShadowFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPUImageHighlightShadowFilter.h; path = framework/Source/GPUImageHighlightShadowFilter.h; sourceTree = "<group>"; };
 		4B4D7C08C99410FCEF5177E4E534B43F /* IQKeyboardManagerConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardManagerConstants.h; path = IQKeyBoardManager/Constants/IQKeyboardManagerConstants.h; sourceTree = "<group>"; };
+		4B75869CD433EF8DBE12A3B838C7D9D3 /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = OpenSDK1.7.9/WechatAuthSDK.h; sourceTree = "<group>"; };
 		4C14398B47BEBA45530DBF7809552A1E /* POPDecayAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDecayAnimation.h; path = pop/POPDecayAnimation.h; sourceTree = "<group>"; };
 		4DC0733372CEAA456936E05FFA096226 /* GPUImageExclusionBlendFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPUImageExclusionBlendFilter.m; path = framework/Source/GPUImageExclusionBlendFilter.m; sourceTree = "<group>"; };
 		4EF67B196DD969667D1A6B6F2485646D /* GPUImageHueBlendFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPUImageHueBlendFilter.h; path = framework/Source/GPUImageHueBlendFilter.h; sourceTree = "<group>"; };
@@ -1114,7 +1115,6 @@
 		877E35D62C9668FF2F1031A319019C46 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		87F685A6DE06A244457E7F8D54993207 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJExtension.h"; path = "MJRefresh/UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
 		88EBC3C18F194A5537A4A28B7C150234 /* libpop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libpop.a; path = libpop.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8928E9E0D37726D8EE75AEC5FCF0400D /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = OpenSDK1.7.8/WXApiObject.h; sourceTree = "<group>"; };
 		897056FCEB5F9ED549AFDDB17D06ECDD /* IQUITextFieldView+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUITextFieldView+Additions.m"; path = "IQKeyBoardManager/Categories/IQUITextFieldView+Additions.m"; sourceTree = "<group>"; };
 		8977E616F901A6648A9CDB2A9B9BCA59 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJExtension.m"; path = "MJRefresh/UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
 		897DCDF31113CE9D2F2CA396EED1B0FE /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
@@ -1124,6 +1124,7 @@
 		8A50D038D668574D6761FF88812D3CA8 /* GPUImageWeakPixelInclusionFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPUImageWeakPixelInclusionFilter.h; path = framework/Source/GPUImageWeakPixelInclusionFilter.h; sourceTree = "<group>"; };
 		8A646B0D4D0EEF33F078BEE6E4C14B65 /* GPUImageGlassSphereFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPUImageGlassSphereFilter.h; path = framework/Source/GPUImageGlassSphereFilter.h; sourceTree = "<group>"; };
 		8A6807A6A8599ABBAAE8B0449BBF3C41 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		8B7A966782D12B862F7A2E8888BE1965 /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = OpenSDK1.7.9/WXApiObject.h; sourceTree = "<group>"; };
 		8C6B3854024286B643B9959069BA8246 /* UICollectionViewLeftAlignedLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewLeftAlignedLayout-dummy.m"; sourceTree = "<group>"; };
 		8C8ABFF1579E24EBC2B31C0F5CC5A20C /* GPUImagePosterizeFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPUImagePosterizeFilter.m; path = framework/Source/GPUImagePosterizeFilter.m; sourceTree = "<group>"; };
 		8CAD57CB80FF5F2ACBADF65F9E4D25D8 /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshNormalHeader.m; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.m; sourceTree = "<group>"; };
@@ -1274,11 +1275,11 @@
 		C1499A2958F4D53D43C1744DA1DA7297 /* MJRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoNormalFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
 		C15BB8E082555EA299387EEB76D2DAC1 /* GPUImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GPUImage.xcconfig; sourceTree = "<group>"; };
 		C16EA1A3F3A7E326C9DA297A443861D4 /* POPAnimator.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPAnimator.mm; path = pop/POPAnimator.mm; sourceTree = "<group>"; };
-		C1DE4A552B74A21CD58874FE4A57BA2C /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = OpenSDK1.7.8/libWeChatSDK.a; sourceTree = "<group>"; };
 		C22F6C40124711932B031D69EC62E25C /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
 		C24DAB7A4086FABB1854F5492B7E5081 /* GPUImageLuminanceRangeFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPUImageLuminanceRangeFilter.h; path = framework/Source/GPUImageLuminanceRangeFilter.h; sourceTree = "<group>"; };
 		C2DB9755ADA4FE863DBE395EA23C0164 /* GPUImageBulgeDistortionFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPUImageBulgeDistortionFilter.h; path = framework/Source/GPUImageBulgeDistortionFilter.h; sourceTree = "<group>"; };
 		C30A1B5F20CA7F7B476029C8122FC26B /* GPUImageSmoothToonFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPUImageSmoothToonFilter.m; path = framework/Source/GPUImageSmoothToonFilter.m; sourceTree = "<group>"; };
+		C316782BABFC5E74FFD65AF99CEDC8F3 /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = OpenSDK1.7.9/WXApi.h; sourceTree = "<group>"; };
 		C3C2D7665D2E9034DC670DEBB785A727 /* GPUImageFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPUImageFilter.h; path = framework/Source/GPUImageFilter.h; sourceTree = "<group>"; };
 		C4A7FDE1ED18D3E2C7A869B4BAC7601C /* GPUImageKuwaharaFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPUImageKuwaharaFilter.h; path = framework/Source/GPUImageKuwaharaFilter.h; sourceTree = "<group>"; };
 		C4AD3D7506C8AD64B6CC831088EBCD19 /* GPUImageMosaicFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPUImageMosaicFilter.h; path = framework/Source/GPUImageMosaicFilter.h; sourceTree = "<group>"; };
@@ -1371,7 +1372,7 @@
 		E307476CE3DB5E84FB65B5E4CA97E940 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		E3511C105A67706639EAE65CCF0C1EDC /* GPUImageFalseColorFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPUImageFalseColorFilter.m; path = framework/Source/GPUImageFalseColorFilter.m; sourceTree = "<group>"; };
 		E35FB6AE2D9BA9128BCB977B5A221C90 /* GPUImageRGBFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPUImageRGBFilter.m; path = framework/Source/GPUImageRGBFilter.m; sourceTree = "<group>"; };
-		E3CE950FCDF99263C9B5212058AA7C2B /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = OpenSDK1.7.8/WechatAuthSDK.h; sourceTree = "<group>"; };
+		E399893661E7FE0C329321B15530CCA5 /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = OpenSDK1.7.9/libWeChatSDK.a; sourceTree = "<group>"; };
 		E3FD8A72DEA7BF0E5AA99BB7F3DB6EA7 /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
 		E43946570778A66E395C616AF49A3DAC /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtension/MJFoundation.m; sourceTree = "<group>"; };
 		E43C45FD4B6935AAF4AA39DC0A3E100C /* GPUImageMultiplyBlendFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPUImageMultiplyBlendFilter.m; path = framework/Source/GPUImageMultiplyBlendFilter.m; sourceTree = "<group>"; };
@@ -1402,7 +1403,6 @@
 		F0BB787989634F1158326A0DC28D9673 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IQKeyboardManager.bundle; path = IQKeyBoardManager/Resources/IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		F0DD02B9D31A756E486C235EDD132973 /* GPUImagePixellateFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPUImagePixellateFilter.m; path = framework/Source/GPUImagePixellateFilter.m; sourceTree = "<group>"; };
 		F0DE6C3D8B7C5033E3A0AB62FA8BB9F9 /* GPUImageGrayscaleFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPUImageGrayscaleFilter.m; path = framework/Source/GPUImageGrayscaleFilter.m; sourceTree = "<group>"; };
-		F135C20A2EC78D053B9B17CF97B494B5 /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = OpenSDK1.7.8/WXApi.h; sourceTree = "<group>"; };
 		F14B6185B09F31FA44B743D07BFB187E /* GPUImageCannyEdgeDetectionFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPUImageCannyEdgeDetectionFilter.m; path = framework/Source/GPUImageCannyEdgeDetectionFilter.m; sourceTree = "<group>"; };
 		F15837D2332B0580CE40313F6AE98F43 /* MJRefreshGifHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshGifHeader.m; path = MJRefresh/Custom/Header/MJRefreshGifHeader.m; sourceTree = "<group>"; };
 		F29BAFB849184253FAF72AC524AFD55D /* GPUImageHazeFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPUImageHazeFilter.m; path = framework/Source/GPUImageHazeFilter.m; sourceTree = "<group>"; };
@@ -2070,18 +2070,6 @@
 			path = YYModel;
 			sourceTree = "<group>";
 		};
-		95350FC294AAC8CF64084C217E9C54BC /* WechatOpenSDK */ = {
-			isa = PBXGroup;
-			children = (
-				E3CE950FCDF99263C9B5212058AA7C2B /* WechatAuthSDK.h */,
-				F135C20A2EC78D053B9B17CF97B494B5 /* WXApi.h */,
-				8928E9E0D37726D8EE75AEC5FCF0400D /* WXApiObject.h */,
-				F64D32A935D6CB8A024044FFC4F81741 /* Frameworks */,
-			);
-			name = WechatOpenSDK;
-			path = WechatOpenSDK;
-			sourceTree = "<group>";
-		};
 		95B505C54BD9707D572EEDC0C24803C1 /* SDCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2103,6 +2091,18 @@
 			);
 			name = SDCycleScrollView;
 			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		97FAB74D96EC8075B60B55FD1EBC0A47 /* WechatOpenSDK */ = {
+			isa = PBXGroup;
+			children = (
+				4B75869CD433EF8DBE12A3B838C7D9D3 /* WechatAuthSDK.h */,
+				C316782BABFC5E74FFD65AF99CEDC8F3 /* WXApi.h */,
+				8B7A966782D12B862F7A2E8888BE1965 /* WXApiObject.h */,
+				EE49954AE66DF433B11F2C7AC0BA04DA /* Frameworks */,
+			);
+			name = WechatOpenSDK;
+			path = WechatOpenSDK;
 			sourceTree = "<group>";
 		};
 		9EBB455B82975BEFB8F51808FDB43587 /* AFNetworking */ = {
@@ -2611,7 +2611,7 @@
 				95B505C54BD9707D572EEDC0C24803C1 /* SDCycleScrollView */,
 				2173BBE323526E41EC18F71FC0C535CD /* SDWebImage */,
 				1D63C788DE607B26E8E7B4C77B0A3665 /* UICollectionViewLeftAlignedLayout */,
-				95350FC294AAC8CF64084C217E9C54BC /* WechatOpenSDK */,
+				97FAB74D96EC8075B60B55FD1EBC0A47 /* WechatOpenSDK */,
 				91F10DFCB40D9D85ED316D7D23F0407C /* YYModel */,
 			);
 			name = Pods;
@@ -2658,6 +2658,14 @@
 			path = "../Target Support Files/Masonry";
 			sourceTree = "<group>";
 		};
+		EE49954AE66DF433B11F2C7AC0BA04DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E399893661E7FE0C329321B15530CCA5 /* libWeChatSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F0FE0A41C8847D37D82F7914B6B36C0B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -2667,14 +2675,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/AFNetworking";
-			sourceTree = "<group>";
-		};
-		F64D32A935D6CB8A024044FFC4F81741 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C1DE4A552B74A21CD58874FE4A57BA2C /* libWeChatSDK.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FBA5BDB36ADE0CB67827EDD630DEFAFE /* Resources */ = {

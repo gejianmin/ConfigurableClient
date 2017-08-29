@@ -33,6 +33,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////常用颜色
 //////////////////////////////////
 #define kColorMianBlue              [UIColor colorWithRed:26/255.0 green:120/255.0 blue:227/255.0 alpha:1]//#1a78e3 主题蓝
+#define kColorMianRed              [UIColor colorWithRed:237/255.0 green:64/255.0 blue:64/255.0 alpha:1]//#ed4040 主题红
+
+
 #define kColorBlue              [UIColor colorWithRed:50/255.0 green:168/255.0 blue:240/255.0 alpha:1]
 #define kColorLightBlue         [UIColor colorWithRed:50/255.0 green:168/255.0 blue:240/255.0 alpha:0.5]
 #define kColorBlueH             [UIColor colorWithRed:9/255.0 green:104/255.0 blue:184/255.0 alpha:1]

@@ -7,11 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import "HomeViewController.h"
 #import "MainViewController.h"
 #import "JDNavigationController.h"
 #import "RootViewController.h"
-@interface AppDelegate ()
+#import "UMessage.h"
+//#import "UserNotifications.h"
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @property (nonatomic, assign) BOOL  is_show_tip;
 
@@ -20,10 +21,10 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
-    //    [self.window setRootViewController:[self pickViewController]];
-    //    [self.window makeKeyAndVisible];
-    [self fecthData];
+    //        self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    //        [self.window setRootViewController:[self pickViewController]];
+    //        [self.window makeKeyAndVisible];
+    [self fecthDataWithOptions:launchOptions];
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -58,7 +59,7 @@
     [UIApplication sharedApplication].keyWindow.rootViewController=navi;
     return  navi;
 }
--(void)fecthData{
+-(void)fecthDataWithOptions:(NSDictionary *)launchOptions{
     
     [[[HHClient sharedInstance] sessionManager] GET:kAppPathId params:nil complete:^(id response, HHError *error) {
         if (error) {
@@ -66,17 +67,107 @@
             if (response) {
                 NSInteger code = [response[@"code"] integerValue];
                 if (code == 200) {
-                    self.is_show_tip = YES;
-                    RootViewController *VC = [[RootViewController alloc]init];
-                    VC.pathUrl = response[@"url"];
-                    [self.window setRootViewController:VC];
-                    //                    return ;
+                    [UMessage startWithAppkey:kUmengAppKey launchOptions:launchOptions];
+                    [UMessage registerForRemoteNotifications];
+                    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+                    center.delegate=self;
+                    UNAuthorizationOptions types10=UNAuthorizationOptionBadge|  UNAuthorizationOptionAlert|UNAuthorizationOptionSound;
+                    [center requestAuthorizationWithOptions:types10     completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                        if (granted) {
+                            //点击允许
+                            //这里可以添加一些自己的逻辑
+                        } else {
+                            //点击不允许
+                            //这里可以添加一些自己的逻辑
+                        }
+                    }];
+                    //打开日志，方便调试
+//                    [UMessage setLogEnabled:YES];
+                
+                    self.is_show_tip = [response[@"result"][@"is_show_tip"] boolValue];
+                    if (self.is_show_tip) {
+                        RootViewController *VC = [[RootViewController alloc]init];
+                        VC.pathUrl = response[@"result"][@"url"];
+                        [self.window setRootViewController:VC];
+                        return ;
+                    }
                 }else if (code == 400){
-                    HHLog(@"%@",response[@"message"]);
+                    
                 };
             }
         }
-        [self.window setRootViewController:[self pickViewController]];
+//        [UMessage startWithAppkey:kUmengAppKey launchOptions:launchOptions];
+//        [UMessage registerForRemoteNotifications];
+//        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+//        center.delegate=self;
+//        UNAuthorizationOptions types10=UNAuthorizationOptionBadge|  UNAuthorizationOptionAlert|UNAuthorizationOptionSound;
+//        [center requestAuthorizationWithOptions:types10     completionHandler:^(BOOL granted, NSError * _Nullable error) {
+//            if (granted) {
+//                //点击允许
+//                //这里可以添加一些自己的逻辑
+//            } else {
+//                //点击不允许
+//                //这里可以添加一些自己的逻辑
+//            }
+//        }];
+//        //打开日志，方便调试
+//        [UMessage setLogEnabled:YES];
+        
+
+        // 否则直接进入应用
+        self.window.rootViewController = [self pickViewController];
+        
+        
     }];
+}
+//iOS10以下使用这个方法接收通知
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    
+    [UMessage didReceiveRemoteNotification:userInfo];
+    
+    //    self.userInfo = userInfo;
+    //    //定制自定的的弹出框
+    //    if([UIApplication sharedApplication].applicationState == UIApplicationStateActive)
+    //    {
+    //        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"标题"
+    //                                                            message:@"Test On ApplicationStateActive"
+    //                                                           delegate:self
+    //                                                  cancelButtonTitle:@"确定"
+    //                                                  otherButtonTitles:nil];
+    //
+    //        [alertView show];
+    //
+    //    }
+}
+
+//iOS10新增：处理前台收到通知的代理方法
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        //应用处于前台时的远程推送接受
+        //关闭U-Push自带的弹出框
+        [UMessage setAutoAlert:NO];
+        //必须加这句代码
+        [UMessage didReceiveRemoteNotification:userInfo];
+        
+    }else{
+        //应用处于前台时的本地推送接受
+    }
+    //当应用处于前台时提示设置，需要哪个可以设置哪一个
+    completionHandler(UNNotificationPresentationOptionSound|UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionAlert);
+}
+
+//iOS10新增：处理后台点击通知的代理方法
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler{
+    NSDictionary * userInfo = response.notification.request.content.userInfo;
+    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        //应用处于后台时的远程推送接受
+        //必须加这句代码
+        [UMessage didReceiveRemoteNotification:userInfo];
+        
+    }else{
+        //应用处于后台时的本地推送接受
+    }
 }
 @end

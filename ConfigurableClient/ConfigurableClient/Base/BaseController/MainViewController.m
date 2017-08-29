@@ -56,33 +56,33 @@
     HomeViewController *home=[[HomeViewController alloc] init];
     home.title=@"Headline";
     home.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Headline" image:nil tag:0];
-    home.tabBarItem.image=[UIImage imageNamed:@"tabbar_home_n"];
-    home.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_home_s"];
+    home.tabBarItem.image=[UIImage imageNamed:@"tabbar_headline_n"];
+    home.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_headline_s"];
     
     SecondViewController *service=[[SecondViewController alloc] init];
     service.title=@"Business";
     service.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Business" image:nil tag:1];
-    service.tabBarItem.image=[UIImage imageNamed:@"tabbar_information_n"];
-    service.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_information_s"];
+    service.tabBarItem.image=[UIImage imageNamed:@"tabbar_business_n"];
+    service.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_business_s"];
     
     ThirdViewController *vc3=[[ThirdViewController alloc] init];
     vc3.title=@"World";
     vc3.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"World" image:nil tag:2];
-    vc3.tabBarItem.image=[UIImage imageNamed:@"tabbar_work_n"];
-    vc3.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_work_s"];
+    vc3.tabBarItem.image=[UIImage imageNamed:@"tabbar_world_n"];
+    vc3.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_world_s"];
     
     FourthViewController * vc4 = [[FourthViewController alloc] init];
     vc4.title=@"Feature";
     vc4.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Feature" image:nil tag:3];
-    vc4.tabBarItem.image=[UIImage imageNamed:@"tabbar_work_n"];
-    vc4.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_work_s"];
+    vc4.tabBarItem.image=[UIImage imageNamed:@"tabbar_feature_n"];
+    vc4.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_feature_s"];
 
     
     MyViewController *exchange=[[MyViewController alloc] init];
     exchange.title=@"Sport";
     exchange.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Sport" image:nil tag:4];
-    exchange.tabBarItem.image=[UIImage imageNamed:@"tabbar_my_n"];
-    exchange.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_my_s"];
+    exchange.tabBarItem.image=[UIImage imageNamed:@"tabbar_sport_n"];
+    exchange.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_sport_s"];
     
     [self addChildViewController:home];
     [self addChildViewController:service];
@@ -94,7 +94,7 @@
     _hhTabBar=[[HHTabbar alloc] init];
     _hhTabBar.delegate=self;
     _hhTabBar.frame=CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 50);
-    _hhTabBar.tintColor=HEXCOLOR(0x1a78e3, 1);
+    _hhTabBar.tintColor=kColorMianRed;
     _hhTabBar.items=@[home.tabBarItem,service.tabBarItem,vc3.tabBarItem,vc4.tabBarItem,exchange.tabBarItem];
     _hhTabBar.selectedItem=home.tabBarItem;
     

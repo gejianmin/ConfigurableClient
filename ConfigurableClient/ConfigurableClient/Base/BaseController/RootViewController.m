@@ -34,9 +34,9 @@
     [self.bg_view addSubview:self.button];
     [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.bg_view.mas_centerY);
-        make.left.equalTo(self.view.mas_left).offset(0);
-        make.right.equalTo(self.view.mas_right).offset(0);
-        make.height.equalTo(@408);
+        make.left.equalTo(self.view.mas_left).offset(50);
+        make.right.equalTo(self.view.mas_right).offset(-50);
+        make.height.equalTo(@(275*1.088));
     }];
 }
 -(void)touchEvent:(UIButton *)sender{
