@@ -115,7 +115,21 @@
     
     
     [_db open];
-   BOOL result =  [_db executeUpdate:@"INSERT INTO search_record(newsId,title,Summary,date,url)VALUES(?,?,?,?,?)",model.newsId,model.title,model.content ? model.content : model.Summary,model.date,model.url];
+    
+    NSString * content ;
+    if (model.caption.length > 0) {
+        content = model.caption;
+    }else if (model.content.length > 0) {
+        
+        content = model.content;
+    }else if (model.Summary.length > 0) {
+        
+        content = model.Summary;
+    }else {
+        content = @"";
+    }
+    
+   BOOL result =  [_db executeUpdate:@"INSERT INTO search_record(newsId,title,Summary,date,url)VALUES(?,?,?,?,?)",model.newsId,model.title,content,model.date,model.url];
     [_db close];
     return result;
 }
