@@ -32,8 +32,6 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:kColorBlue];
     
-    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithTitle:@"收藏" style:UIBarButtonItemStylePlain target:self action:@selector(right)];
-    self.navigationItem.rightBarButtonItem = item;
 }
 
 - (void)right {
@@ -93,6 +91,14 @@
     _dataModel = dataModel;
     [self reloadDataTitle:dataModel.title];
     [self createScrollView:dataModel.images title:dataModel.title time:dataModel.date content:dataModel.content caption:dataModel.caption];
+    if ([[YDFMDB manager] isExistWithNewsID:dataModel.newsId]) {
+        
+        UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithTitle:@"collected" style:UIBarButtonItemStylePlain target:self action:nil];
+        self.navigationItem.rightBarButtonItem = item;
+    }else {
+        UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithTitle:@"collect" style:UIBarButtonItemStylePlain target:self action:@selector(right)];
+        self.navigationItem.rightBarButtonItem = item;
+    }
 }
 
 
