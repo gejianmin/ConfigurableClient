@@ -119,6 +119,14 @@
     [_db close];
     return result;
 }
+
+- (BOOL)isExistWithNewsID:(NSString *)newsID {
+    [_db open];
+    FMResultSet *resultSet = [_db executeQuery:[NSString stringWithFormat:@"select * from search_record where newsId = %@",newsID]];
+    BOOL result = [resultSet next];
+    [_db close];
+    return result;
+}
 - (void)deleteAllRecords {
         [_db open];
     

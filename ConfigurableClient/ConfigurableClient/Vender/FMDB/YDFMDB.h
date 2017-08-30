@@ -55,6 +55,7 @@ typedef NS_ENUM(NSUInteger, YDFMDBSourceType) {
 
 - (BOOL)addDataWithModel:(HeaderModel*)model;
 
+- (BOOL)isExistWithNewsID:(NSString *)newsID;
 
 - (BOOL)removeDataWithModel:(HeaderModel*)model;
 
