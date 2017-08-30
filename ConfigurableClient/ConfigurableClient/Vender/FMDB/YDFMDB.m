@@ -129,9 +129,15 @@
         content = @"";
     }
     
-   BOOL result =  [_db executeUpdate:@"INSERT INTO search_record(newsId,title,Summary,date,url)VALUES(?,?,?,?,?)",model.newsId,model.title,content,model.date,model.url];
+   BOOL result =  [_db executeUpdate:@"INSERT INTO search_record(newsId,title,Summary,date,url)VALUES(?,?,?,?,?)",model.newsId,model.title,content,model.date,model.image];
     [_db close];
     return result;
+//    Summary = "SHANGHAI is following in Beijing\U2019s footsteps by canceling the 21-kilometer international half marathon event.\n\nOrganizers announced yesterday that this year\U2019s half marathon, which was due to take place ";
+//    category = Metro;
+//    date = 20170830;
+//    image = "http://www.shanghaidaily.com/newsimage/2017/08/29/120170829235041.jpg";
+//    newsId = 647360;
+//    title = "Shanghai half marathon canceled to meet \U2018demand of our runners\U2019";
 }
 
 - (BOOL)isExistWithNewsID:(NSString *)newsID {
@@ -184,7 +190,7 @@
         model.title = title;
         model.Summary = Summary;
         model.date = date;
-        model.url = url;
+        model.image = url;
         
         [arr addObject:model];
     }

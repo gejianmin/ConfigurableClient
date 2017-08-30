@@ -32,9 +32,6 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:kColorBlue];
     
-    
-    
-
 }
 
 - (void)right {
