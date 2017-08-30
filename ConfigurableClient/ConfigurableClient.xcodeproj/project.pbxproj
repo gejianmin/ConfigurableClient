@@ -23,6 +23,7 @@
 		373B850F1F42A2B100F65132 /* HeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B850E1F42A2B100F65132 /* HeaderModel.m */; };
 		373B85121F42C65800F65132 /* HHBaseWebViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B85111F42C65800F65132 /* HHBaseWebViewcontroller.m */; };
 		37645EDA1F42F8FF00734AA2 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37645ED91F42F8FF00734AA2 /* HomeCell.m */; };
+		37984BEC1F559C8800697B33 /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 37984BEB1F559C8800697B33 /* UIView+Shadow.m */; };
 		37A8A5131F2A028600F35513 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A50E1F2A028600F35513 /* MainViewController.m */; };
 		37A8A5141F2A028600F35513 /* HHTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A5121F2A028600F35513 /* HHTabbar.m */; };
 		37A8A51D1F2A041E00F35513 /* CRMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A51C1F2A041E00F35513 /* CRMBaseViewController.m */; };
@@ -38,6 +39,9 @@
 		37C91CC91F47B0E300145516 /* GuidePagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C91CC81F47B0E300145516 /* GuidePagesViewController.m */; };
 		37C91CD31F49777700145516 /* libUMessage_Sdk_1.5.0a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C91CD11F49777700145516 /* libUMessage_Sdk_1.5.0a.a */; };
 		37C91CD51F4977CE00145516 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C91CD41F4977CE00145516 /* UserNotifications.framework */; };
+		37D6C8A51F55986200095053 /* HHSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C8A41F55986200095053 /* HHSegmentControl.m */; };
+		37D6C8AB1F559BFA00095053 /* MPMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C8A81F559BFA00095053 /* MPMineCell.m */; };
+		37D6C8AC1F559BFA00095053 /* MPMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C8AA1F559BFA00095053 /* MPMineHeaderView.m */; };
 		A12655E51F42D0CD0080C609 /* UIWebView+Load.m in Sources */ = {isa = PBXBuildFile; fileRef = A12655E41F42D0CD0080C609 /* UIWebView+Load.m */; };
 		A12656351F441E4F0080C609 /* MyBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A12656191F441E4F0080C609 /* MyBaseLayout.m */; };
 		A12656361F441E4F0080C609 /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A126561B1F441E4F0080C609 /* MyFlowLayout.m */; };
@@ -107,6 +111,8 @@
 		373B85111F42C65800F65132 /* HHBaseWebViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseWebViewcontroller.m; sourceTree = "<group>"; };
 		37645ED81F42F8FF00734AA2 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
 		37645ED91F42F8FF00734AA2 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		37984BEA1F559C8800697B33 /* UIView+Shadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shadow.h"; sourceTree = "<group>"; };
+		37984BEB1F559C8800697B33 /* UIView+Shadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shadow.m"; sourceTree = "<group>"; };
 		37A8A50D1F2A028600F35513 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		37A8A50E1F2A028600F35513 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		37A8A5111F2A028600F35513 /* HHTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHTabbar.h; sourceTree = "<group>"; };
@@ -139,6 +145,12 @@
 		37C91CD11F49777700145516 /* libUMessage_Sdk_1.5.0a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.5.0a.a; sourceTree = "<group>"; };
 		37C91CD21F49777700145516 /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
 		37C91CD41F4977CE00145516 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		37D6C8A31F55986200095053 /* HHSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHSegmentControl.h; sourceTree = "<group>"; };
+		37D6C8A41F55986200095053 /* HHSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHSegmentControl.m; sourceTree = "<group>"; };
+		37D6C8A71F559BFA00095053 /* MPMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMineCell.h; sourceTree = "<group>"; };
+		37D6C8A81F559BFA00095053 /* MPMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMineCell.m; sourceTree = "<group>"; };
+		37D6C8A91F559BFA00095053 /* MPMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMineHeaderView.h; sourceTree = "<group>"; };
+		37D6C8AA1F559BFA00095053 /* MPMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMineHeaderView.m; sourceTree = "<group>"; };
 		A12655E31F42D0CD0080C609 /* UIWebView+load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+load.h"; sourceTree = "<group>"; };
 		A12655E41F42D0CD0080C609 /* UIWebView+Load.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Load.m"; sourceTree = "<group>"; };
 		A12656181F441E4F0080C609 /* MyBaseLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBaseLayout.h; sourceTree = "<group>"; };
@@ -355,6 +367,7 @@
 		373B85071F417EC500F65132 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37D6C8A61F559BFA00095053 /* MPView */,
 				37645ED81F42F8FF00734AA2 /* HomeCell.h */,
 				37645ED91F42F8FF00734AA2 /* HomeCell.m */,
 				373B85081F417EC500F65132 /* HHBannerView.h */,
@@ -394,6 +407,8 @@
 		37A8A5101F2A028600F35513 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				37D6C8A31F55986200095053 /* HHSegmentControl.h */,
+				37D6C8A41F55986200095053 /* HHSegmentControl.m */,
 				37A8A5111F2A028600F35513 /* HHTabbar.h */,
 				37A8A5121F2A028600F35513 /* HHTabbar.m */,
 				37A8A51E1F2A09F800F35513 /* CustomBtn.h */,
@@ -434,6 +449,19 @@
 				37C91CD21F49777700145516 /* UMessage.h */,
 			);
 			path = UMessage_Sdk_1.5.0a;
+			sourceTree = "<group>";
+		};
+		37D6C8A61F559BFA00095053 /* MPView */ = {
+			isa = PBXGroup;
+			children = (
+				37984BEA1F559C8800697B33 /* UIView+Shadow.h */,
+				37984BEB1F559C8800697B33 /* UIView+Shadow.m */,
+				37D6C8A71F559BFA00095053 /* MPMineCell.h */,
+				37D6C8A81F559BFA00095053 /* MPMineCell.m */,
+				37D6C8A91F559BFA00095053 /* MPMineHeaderView.h */,
+				37D6C8AA1F559BFA00095053 /* MPMineHeaderView.m */,
+			);
+			path = MPView;
 			sourceTree = "<group>";
 		};
 		5B3BA4D2E6C4E765CC4F7D12 /* Frameworks */ = {
@@ -739,10 +767,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A12656351F441E4F0080C609 /* MyBaseLayout.m in Sources */,
+				37D6C8A51F55986200095053 /* HHSegmentControl.m in Sources */,
 				373B850B1F417EC500F65132 /* HHBannerView.m in Sources */,
 				A12656391F441E4F0080C609 /* MyLayoutMeasure.m in Sources */,
+				37984BEC1F559C8800697B33 /* UIView+Shadow.m in Sources */,
 				37A8A5231F2A09F800F35513 /* CustomLab.m in Sources */,
 				A126564D1F4435C50080C609 /* NSString+Size.m in Sources */,
+				37D6C8AB1F559BFA00095053 /* MPMineCell.m in Sources */,
 				A12656401F441E4F0080C609 /* README.md in Sources */,
 				373B850F1F42A2B100F65132 /* HeaderModel.m in Sources */,
 				A126563B1F441E4F0080C609 /* MyLayoutSizeClass.m in Sources */,
@@ -767,6 +798,7 @@
 				A126563E1F441E4F0080C609 /* MyRelativeLayout.m in Sources */,
 				A12656371F441E4F0080C609 /* MyFrameLayout.m in Sources */,
 				A126563F1F441E4F0080C609 /* MyTableLayout.m in Sources */,
+				37D6C8AC1F559BFA00095053 /* MPMineHeaderView.m in Sources */,
 				37A8A51D1F2A041E00F35513 /* CRMBaseViewController.m in Sources */,
 				37C91C841F441E6000145516 /* RootViewController.m in Sources */,
 				373B85121F42C65800F65132 /* HHBaseWebViewcontroller.m in Sources */,

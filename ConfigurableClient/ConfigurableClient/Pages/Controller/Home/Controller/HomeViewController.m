@@ -11,7 +11,9 @@
 #import "HeaderModel.h"
 #import "HHBaseWebViewcontroller.h"
 #import "HomeCell.h"
-@interface HomeViewController ()<HHBannerViewDelegate>
+#import "HHSegmentControl.h"
+
+@interface HomeViewController ()<HHBannerViewDelegate,HHSegmentControlDelegate>
 {
     int _pageSize;
     int _coupunPageIndex;
@@ -20,6 +22,7 @@
 @property (nonatomic, strong) HHBannerView * bannerView;
 @property (nonatomic, strong) NSMutableArray * dataSourceArray;
 @property (nonatomic, strong) CustomBtn * button;
+@property (nonatomic, strong) HHSegmentControl *segment;
 
 @end
 
@@ -40,17 +43,40 @@
 -(void)initUI{
     _pageSize=10;
     self.tableView.backgroundColor=[UIColor clearColor];
-    self.tableView.frame = CGRectMake(0, 63, HH_SCREEN_W, HH_SCREEN_H-64-10);
+    self.tableView.frame = CGRectMake(0, 63+44, HH_SCREEN_W, HH_SCREEN_H-64-10-44);
     [self.tableView registerClass:[HomeCell class] forCellReuseIdentifier:NSStringFromClass([HomeCell class])];
     [self.tableView setTableHeaderView:[self tableViewHeaderView]];
     self.tableView.mj_header=[MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(configDataSource)];
     [self.view addSubview:self.tableView];
+    [self.view addSubview:self.segment];
+}
+-(HHSegmentControl *)segment{
+    if (_segment==nil) {
+        _segment=[[HHSegmentControl alloc] initWithTitles:@[@"Headline",@"Business",@"World",@"Feature"]];
+        _segment.delegate=self;
+        _segment.frame=CGRectMake(0, 64, self.view.width, 44);
+    }
+    return _segment;
+}
+#pragma mark - delegate
+- (void)segmentControl:(HHSegmentControl *)control didSelectedAtIndex:(NSInteger)index{
+    HHLog(@"index")
+    if (index == 0) {
+        self.newsCategoryType = kNewsCategoryTypeHeadline;
+    }else if (index == 1) {
+        self.newsCategoryType = kNewsCategoryTypeBusiness;
+    }else if (index == 2) {
+        self.newsCategoryType = kNewsCategoryTypeFeature;
+    }else{
+        self.newsCategoryType = kNewsCategoryTypeWorld;
+
+    }
 }
 -(UIView *)tableViewHeaderView {
-     self.bannerView = [[HHBannerView alloc]initWithFrame:CGRectMake(0, 64, HH_SCREEN_W, 260) WithBannerSource:NinaBannerStyleOnlyWebSource WithBannerArray:nil titleArray:nil];
+     self.bannerView = [[HHBannerView alloc]initWithFrame:CGRectMake(0, 64+44, HH_SCREEN_W, 260) WithBannerSource:NinaBannerStyleOnlyWebSource WithBannerArray:nil titleArray:nil];
     _bannerView.timeInterval = 2;
     _bannerView.showPageControl = YES;
-    _bannerView.showTransition = YES;
+    _bannerView.showTransition = NO;
     _bannerView.delegate = self;
     return self.bannerView;
 }

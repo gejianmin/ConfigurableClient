@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (nonatomic, assign)float sizeScaleX;
+@property (nonatomic, assign)float sizeScaleY;
 
 @end
 

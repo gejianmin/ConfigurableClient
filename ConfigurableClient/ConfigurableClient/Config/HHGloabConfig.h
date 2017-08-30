@@ -61,20 +61,9 @@ static NSString * const CRMTraceRecordPath = @"traceRecord";/*!< 跟进记录*/
 static NSString * const CRMProductPath = @"product";/*!< 产品*/
 static NSString * const CRMPersonPath = @"person";/*!< 个人中心*/
 
+#define MPWidthScale (((AppDelegate *)[UIApplication sharedApplication].delegate).sizeScaleX)
 
-
-//用户信息 暂时写死
-// 135-5213-7503
-//static NSString  * const kUserID=@"144";//用户ID
-//static NSString  * const kName=@"赵远东";//用户名
-//static NSString *  const kEnterpriseId = @"4d2b6f5c5f0649ad8b45fc461601d82c";//企业ID
-//static NSString  * const kRoleId=@"356";//角色ID
-//static NSString *  const kRoleName = @"系统管理员";//角色名称
-//static NSString  * const kDepartmentID=@"126";//部门ID
-//static NSString *  const kDepartmentName = @"聚通达";//部门名称
-// 张玉
-//static NSString  * const kUserID=@"17";
-//static NSString *  const kEnterpriseId = @"2";
+#define MPHeightScale (((AppDelegate *)[UIApplication sharedApplication].delegate).sizeScaleY)
 
 
 #endif /* HHGloabConfig_h */

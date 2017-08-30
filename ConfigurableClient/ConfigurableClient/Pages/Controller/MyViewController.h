@@ -7,8 +7,20 @@
 //
 
  
-#import "HomeViewController.h"
+#import "CRMBaseViewController.h"
 
-@interface MyViewController : HomeViewController
+@interface MyViewController : CRMBaseViewController
+
+@end
+
+@interface MPUserItem : NSObject
+
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *imageName;
+@property (nonatomic, strong) NSString *detail;
+@property (nonatomic, assign) NSInteger badgeValue;
+@property (nonatomic, assign) BOOL isNeedIDAuth;
+@property (nonatomic, assign) Class pushControllerClass;
+
 
 @end

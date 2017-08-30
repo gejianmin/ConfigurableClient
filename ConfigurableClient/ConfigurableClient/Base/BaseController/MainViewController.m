@@ -79,8 +79,8 @@
 
     
     MyViewController *exchange=[[MyViewController alloc] init];
-    exchange.title=@"Sport";
-    exchange.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Sport" image:nil tag:4];
+    exchange.title=@"Setting";
+    exchange.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Setting" image:nil tag:4];
     exchange.tabBarItem.image=[UIImage imageNamed:@"tabbar_sport_n"];
     exchange.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_sport_s"];
     

@@ -24,7 +24,7 @@
 #import <HHNetworking/HHNetworking.h>
 #import <HHSecurityNetwork/HHSecurityNetwork.h>
 //#import "UIColor+Hex.h"
-
+#import "AppDelegate.h"
 #import "MyLayout.h"//约束
 
 

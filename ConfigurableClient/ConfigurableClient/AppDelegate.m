@@ -25,6 +25,8 @@
     //        [self.window setRootViewController:[self pickViewController]];
     //        [self.window makeKeyAndVisible];
     [self fecthDataWithOptions:launchOptions];
+    [self setupMainInfoSettiong];
+
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -52,6 +54,20 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (void)setupMainInfoSettiong{
+    
+    if(HH_SCREEN_H != 667){
+        self.sizeScaleX = HH_SCREEN_W/375;
+        self.sizeScaleY = HH_SCREEN_H/667;
+    }else{
+        self.sizeScaleX = 1.0;
+        self.sizeScaleY = 1.0;
+    }
+    
+    
+}
+
 - (UIViewController*)pickViewController{
     MainViewController *main=[[MainViewController alloc] init];
     JDNavigationController *navi = [[JDNavigationController alloc]initWithRootViewController:main];
