@@ -53,6 +53,13 @@
         make.left.equalTo(iconBtn.mas_right).offset(10);
         make.centerY.equalTo(self.mas_centerY);
     }];
+    [self.contentView addSubview:self.rightLbl];
+    self.rightLbl.hidden = YES;
+    [self.rightLbl mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.right.equalTo(self.mas_right).offset(-15);
+        make.centerY.equalTo(self.mas_centerY);
+    }];
 
 }
 - (void)setIconBtnImage:(NSString *)iconBtnImage {
@@ -64,6 +71,13 @@
     
     _title = title;
     self.titleLabel.text = title;
+}
+-(CustomLab *)rightLbl{
+    if (_rightLbl == nil) {
+        _rightLbl = [[CustomLab alloc]initWithFrame:CGRectZero font:15.f aligment:NSTextAlignmentRight text:@"" textcolor:kColorGray2];
+    }
+    return _rightLbl;
+
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -52,7 +52,7 @@
 }
 -(HHSegmentControl *)segment{
     if (_segment==nil) {
-        _segment=[[HHSegmentControl alloc] initWithTitles:@[@"Headline",@"Business",@"World",@"Feature"]];
+        _segment=[[HHSegmentControl alloc] initWithTitles:@[@"Headline",@"Business",@"Sport",@"Feature"]];
         _segment.delegate=self;
         _segment.frame=CGRectMake(0, 64, self.view.width, 44);
     }
@@ -66,9 +66,9 @@
     }else if (index == 1) {
         self.newsCategoryType = kNewsCategoryTypeBusiness;
     }else if (index == 2) {
-        self.newsCategoryType = kNewsCategoryTypeFeature;
+        self.newsCategoryType = kNewsCategoryTypeSport;
     }else{
-        self.newsCategoryType = kNewsCategoryTypeWorld;
+        self.newsCategoryType = kNewsCategoryTypeFeature;
 
     }
 }

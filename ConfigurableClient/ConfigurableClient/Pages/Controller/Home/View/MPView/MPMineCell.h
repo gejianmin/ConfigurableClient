@@ -12,5 +12,7 @@
 
 @property (nonatomic, copy) NSString *iconBtnImage;
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) CustomLab  *rightLbl;
+
 
 @end

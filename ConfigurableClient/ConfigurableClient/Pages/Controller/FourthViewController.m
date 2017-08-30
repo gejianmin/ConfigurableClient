@@ -52,6 +52,10 @@
     return _dataSourceArray;
 }
 #pragma mark - tableViewDelegate
+-(CGFloat ) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0.00001;
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     return [self.dataSourceArray count];

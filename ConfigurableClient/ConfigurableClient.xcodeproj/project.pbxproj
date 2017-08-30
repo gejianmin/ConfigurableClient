@@ -24,6 +24,9 @@
 		373B85121F42C65800F65132 /* HHBaseWebViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B85111F42C65800F65132 /* HHBaseWebViewcontroller.m */; };
 		37645EDA1F42F8FF00734AA2 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37645ED91F42F8FF00734AA2 /* HomeCell.m */; };
 		37984BEC1F559C8800697B33 /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 37984BEB1F559C8800697B33 /* UIView+Shadow.m */; };
+		37984BEF1F567B3F00697B33 /* CommentsAndFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37984BEE1F567B3F00697B33 /* CommentsAndFeedbackVC.m */; };
+		37984BF21F567BE800697B33 /* AddRemindersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37984BF11F567BE800697B33 /* AddRemindersView.m */; };
+		37984BF51F56826D00697B33 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37984BF41F56826D00697B33 /* AboutViewController.m */; };
 		37A8A5131F2A028600F35513 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A50E1F2A028600F35513 /* MainViewController.m */; };
 		37A8A5141F2A028600F35513 /* HHTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A5121F2A028600F35513 /* HHTabbar.m */; };
 		37A8A51D1F2A041E00F35513 /* CRMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8A51C1F2A041E00F35513 /* CRMBaseViewController.m */; };
@@ -115,6 +118,12 @@
 		37645ED91F42F8FF00734AA2 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
 		37984BEA1F559C8800697B33 /* UIView+Shadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shadow.h"; sourceTree = "<group>"; };
 		37984BEB1F559C8800697B33 /* UIView+Shadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shadow.m"; sourceTree = "<group>"; };
+		37984BED1F567B3F00697B33 /* CommentsAndFeedbackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsAndFeedbackVC.h; sourceTree = "<group>"; };
+		37984BEE1F567B3F00697B33 /* CommentsAndFeedbackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsAndFeedbackVC.m; sourceTree = "<group>"; };
+		37984BF01F567BE800697B33 /* AddRemindersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRemindersView.h; sourceTree = "<group>"; };
+		37984BF11F567BE800697B33 /* AddRemindersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRemindersView.m; sourceTree = "<group>"; };
+		37984BF31F56826D00697B33 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		37984BF41F56826D00697B33 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		37A8A50D1F2A028600F35513 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		37A8A50E1F2A028600F35513 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		37A8A5111F2A028600F35513 /* HHTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHTabbar.h; sourceTree = "<group>"; };
@@ -334,6 +343,10 @@
 				373B85021F417EC500F65132 /* Home */,
 				373B84F81F417CE300F65132 /* MyViewController.h */,
 				373B84F91F417CE300F65132 /* MyViewController.m */,
+				37984BED1F567B3F00697B33 /* CommentsAndFeedbackVC.h */,
+				37984BEE1F567B3F00697B33 /* CommentsAndFeedbackVC.m */,
+				37984BF31F56826D00697B33 /* AboutViewController.h */,
+				37984BF41F56826D00697B33 /* AboutViewController.m */,
 				373B84FA1F417CE300F65132 /* SecondViewController.h */,
 				373B84FB1F417CE300F65132 /* SecondViewController.m */,
 				373B84FC1F417CE300F65132 /* ThirdViewController.h */,
@@ -373,6 +386,8 @@
 		373B85071F417EC500F65132 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37984BF01F567BE800697B33 /* AddRemindersView.h */,
+				37984BF11F567BE800697B33 /* AddRemindersView.m */,
 				37D6C8A61F559BFA00095053 /* MPView */,
 				37645ED81F42F8FF00734AA2 /* HomeCell.h */,
 				37645ED91F42F8FF00734AA2 /* HomeCell.m */,
@@ -804,6 +819,7 @@
 				37A8A5231F2A09F800F35513 /* CustomLab.m in Sources */,
 				A126564D1F4435C50080C609 /* NSString+Size.m in Sources */,
 				37D6C8AB1F559BFA00095053 /* MPMineCell.m in Sources */,
+				37984BF21F567BE800697B33 /* AddRemindersView.m in Sources */,
 				A12656401F441E4F0080C609 /* README.md in Sources */,
 				373B850F1F42A2B100F65132 /* HeaderModel.m in Sources */,
 				A126563B1F441E4F0080C609 /* MyLayoutSizeClass.m in Sources */,
@@ -817,10 +833,12 @@
 				3738FBF31F0C89CE008FE3C7 /* main.m in Sources */,
 				A126564A1F4434D80080C609 /* ZDLabelScrollView.m in Sources */,
 				A12656431F4430A30080C609 /* NSDate+ZD.m in Sources */,
+				37984BF51F56826D00697B33 /* AboutViewController.m in Sources */,
 				A12656381F441E4F0080C609 /* MyLayoutDime.m in Sources */,
 				A126563D1F441E4F0080C609 /* MyMaker.m in Sources */,
 				373B85011F417CE300F65132 /* ThirdViewController.m in Sources */,
 				A12655E51F42D0CD0080C609 /* UIWebView+Load.m in Sources */,
+				37984BEF1F567B3F00697B33 /* CommentsAndFeedbackVC.m in Sources */,
 				A12656491F4434D80080C609 /* AutoScrollLabel.m in Sources */,
 				37A8A5221F2A09F800F35513 /* CustomBtn.m in Sources */,
 				F5DE35851F5656AE001B28DF /* YDContactRecordModel.m in Sources */,

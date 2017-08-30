@@ -93,7 +93,7 @@
         HHButton *drbtn=self.subviews[i];
         if ([drbtn isKindOfClass:NSClassFromString(@"UIButton")]) {
             
-            [drbtn setFrame:CGRectMake(k*self.frame.size.width/self.items.count, k==2?2:5, self.frame.size.width/self.items.count, kTabbarH-5)];
+            [drbtn setFrame:CGRectMake(k*self.frame.size.width/self.items.count, k==2?2:4, self.frame.size.width/self.items.count, kTabbarH-5)];
             //            drbtn.titleRect=CGRectMake(0, drbtn.height-20, drbtn.width, 20);
             
             k++;
