@@ -55,6 +55,8 @@
 		A12656491F4434D80080C609 /* AutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A12656461F4434D80080C609 /* AutoScrollLabel.m */; };
 		A126564A1F4434D80080C609 /* ZDLabelScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A12656481F4434D80080C609 /* ZDLabelScrollView.m */; };
 		A126564D1F4435C50080C609 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = A126564C1F4435C50080C609 /* NSString+Size.m */; };
+		F5DE35851F5656AE001B28DF /* YDContactRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DE35821F5656AE001B28DF /* YDContactRecordModel.m */; };
+		F5DE35861F5656AE001B28DF /* YDFMDB.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DE35841F5656AE001B28DF /* YDFMDB.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +182,10 @@
 		CDE44F357B4D703570E877EA /* libPods-ConfigurableClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfigurableClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4117F52EED5B09B71A81FBC /* Pods-ConfigurableClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfigurableClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConfigurableClient/Pods-ConfigurableClient.release.xcconfig"; sourceTree = "<group>"; };
 		EC8D9CE6EF6C7A03C42A9C40 /* Pods-ConfigurableClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfigurableClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConfigurableClient/Pods-ConfigurableClient.debug.xcconfig"; sourceTree = "<group>"; };
+		F5DE35811F5656AE001B28DF /* YDContactRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDContactRecordModel.h; sourceTree = "<group>"; };
+		F5DE35821F5656AE001B28DF /* YDContactRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDContactRecordModel.m; sourceTree = "<group>"; };
+		F5DE35831F5656AE001B28DF /* YDFMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDFMDB.h; sourceTree = "<group>"; };
+		F5DE35841F5656AE001B28DF /* YDFMDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDFMDB.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -451,6 +457,7 @@
 		A12656131F441E290080C609 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				F5DE35801F5656AE001B28DF /* FMDB */,
 				A12656441F4434D80080C609 /* RunLabel */,
 				A12656141F441E4F0080C609 /* MyLayout */,
 			);
@@ -530,6 +537,17 @@
 				E4117F52EED5B09B71A81FBC /* Pods-ConfigurableClient.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F5DE35801F5656AE001B28DF /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				F5DE35811F5656AE001B28DF /* YDContactRecordModel.h */,
+				F5DE35821F5656AE001B28DF /* YDContactRecordModel.m */,
+				F5DE35831F5656AE001B28DF /* YDFMDB.h */,
+				F5DE35841F5656AE001B28DF /* YDFMDB.m */,
+			);
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -679,9 +697,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ConfigurableClient/Pods-ConfigurableClient-resources.sh",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -707,13 +734,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ConfigurableClient-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D215B5F25B3FA5C22BDCC015 /* [CP] Embed Pods Frameworks */ = {
@@ -762,6 +792,7 @@
 				A12655E51F42D0CD0080C609 /* UIWebView+Load.m in Sources */,
 				A12656491F4434D80080C609 /* AutoScrollLabel.m in Sources */,
 				37A8A5221F2A09F800F35513 /* CustomBtn.m in Sources */,
+				F5DE35851F5656AE001B28DF /* YDContactRecordModel.m in Sources */,
 				373B84FF1F417CE300F65132 /* MyViewController.m in Sources */,
 				37645EDA1F42F8FF00734AA2 /* HomeCell.m in Sources */,
 				A126563E1F441E4F0080C609 /* MyRelativeLayout.m in Sources */,
@@ -771,6 +802,7 @@
 				37C91C841F441E6000145516 /* RootViewController.m in Sources */,
 				373B85121F42C65800F65132 /* HHBaseWebViewcontroller.m in Sources */,
 				37A8A5131F2A028600F35513 /* MainViewController.m in Sources */,
+				F5DE35861F5656AE001B28DF /* YDFMDB.m in Sources */,
 				37A8A5491F2C32D200F35513 /* UIView+RoundCorner.m in Sources */,
 				A126563C1F441E4F0080C609 /* MyLinearLayout.m in Sources */,
 				373B850A1F417EC500F65132 /* HomeViewController.m in Sources */,

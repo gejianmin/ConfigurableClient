@@ -13,6 +13,7 @@
 #import "NSDate+ZD.h"
 
 #import "ZDLabelScrollView.h"
+#import "YDFMDB.h"
 
 @interface HHBaseWebViewcontroller () {
     
@@ -26,10 +27,20 @@
 
 @implementation HHBaseWebViewcontroller
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:kColorBlue];
     
+    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithTitle:@"收藏" style:UIBarButtonItemStylePlain target:self action:@selector(right)];
+    self.navigationItem.rightBarButtonItem = item;
+}
+
+- (void)right {
+    if ([[YDFMDB manager] addDataWithModel:self.dataModel]) {
+        
+        [self showToastHUD:@"收藏成功" complete:nil];
+    }
 }
 -(void)setupUI{
     

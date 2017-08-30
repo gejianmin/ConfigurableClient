@@ -6,8 +6,8 @@
 //  Copyright © 2017年 juTongDa. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "CRMBaseViewController.h"
 
-@interface FourthViewController : HomeViewController
+@interface FourthViewController : CRMBaseViewController
 
 @end
