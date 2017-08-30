@@ -24,6 +24,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.dataSourceArray = [[YDFMDB manager] getAllRecords];
+    if (self.dataSourceArray.count == 0) {
+        [self reloadDataWithStatus:NO];
+    }else{
+        [self reloadDataWithStatus:YES];
+    }
     [self.tableView reloadData];
 
 }
@@ -43,8 +48,15 @@
 //    [self.tableView setTableHeaderView:[self tableViewHeaderView]];
 //    self.tableView.mj_header=[MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(configDataSource)];
     [self.view addSubview:self.tableView];
+    [self reloadDataWith:ImageNamed(@"wushuju") title:@"You don't have a collection of information~" superView:self.tableView supViewHeight:50];
+//    if (self.dataSourceArray.count == 0) {
+//        [self reloadDataWithStatus:NO];
+//    }else{
+//        [self reloadDataWithStatus:YES];
+//    }
+
 }
- 
+
 - (NSMutableArray *)dataSourceArray{
     if (_dataSourceArray == nil) {
         _dataSourceArray =[[NSMutableArray alloc]init];
@@ -65,6 +77,7 @@
     return [HomeCell cellHeight];
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     HomeCell * cell =[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HomeCell class])];
     HeaderModel * model = self.dataSourceArray[indexPath.row];
     cell.headerModel= model;
@@ -80,6 +93,7 @@
             [self showToastHUD:error.localizedDescription complete:nil];
         }else{
             NSArray * list =[HeaderModel mj_objectArrayWithKeyValuesArray:response[@"newslist"]];
+            
             HeaderModel * modelTemp = [list firstObject];
             HHBaseWebViewcontroller * VC =[[HHBaseWebViewcontroller alloc]init];
             VC.url = modelTemp.url;
@@ -100,13 +114,13 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return @"取消收藏";
+    return @"Cancel collection";
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     HeaderModel * model = self.dataSourceArray[indexPath.row];
     if ([[YDFMDB manager] removeDataWithModel:model]) {
-        [self showToastHUD:@"取消成功" complete:nil];
+        [self showToastHUD:@"Cancellation success" complete:nil];
     };
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -115,6 +129,13 @@
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (self.dataSourceArray.count == 0) {
+                [self reloadDataWithStatus:NO];
+                return;
+            }else{
+                [self reloadDataWithStatus:YES];
+            }
+
             [tableView reloadData];
         });
     });

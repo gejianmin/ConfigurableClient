@@ -316,17 +316,9 @@
     self.nodataView =[[UIView alloc]initWithFrame:CGRectZero color:[UIColor clearColor]];
     [superView addSubview:self.nodataView];
     [self.nodataView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(superView).offset(-(height?height:50));
-        
-        
-//        make.left.right.equalTo(self.view).offset(0);
-//        make.width.equalTo(@(HH_SCREEN_W));
-        
-//此处不当，已修改
+        make.centerX.equalTo(superView.mas_centerX).offset(0);
+        make.centerY.equalTo(superView.mas_centerY).offset(-(height?height:50));
         make.left.right.equalTo(superView).offset(0);
-//        make.width.equalTo(@(HH_SCREEN_W));
-
-        
         make.height.equalTo(@213);
     }];
     UIImageView * ima =[[UIImageView alloc] initWithImage:image];
@@ -342,7 +334,7 @@
     [messageLbl mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.nodataView.mas_centerX);
         make.bottom.equalTo(self.nodataView.mas_bottom).offset(-10);
-    }];    
+    }];
     [self.nodataView setHidden:YES];
 }
 - (void)reloadDataWithStatus:(BOOL)isShow {

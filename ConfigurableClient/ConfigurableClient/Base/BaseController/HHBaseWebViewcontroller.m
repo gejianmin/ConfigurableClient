@@ -37,7 +37,7 @@
 - (void)right {
     if ([[YDFMDB manager] addDataWithModel:self.dataModel]) {
         
-        [self showToastHUD:@"收藏成功" complete:nil];
+        [self showToastHUD:@"Collection success" complete:nil];
     }
 }
 -(void)setupUI{
