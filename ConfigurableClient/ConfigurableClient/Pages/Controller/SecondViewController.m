@@ -122,6 +122,7 @@
             HHBaseWebViewcontroller * VC =[[HHBaseWebViewcontroller alloc]init];
             VC.url = modelTemp.url;
             VC.dataModel = modelTemp;
+            VC.dataModelTmp = model;
             [self.navigationController pushViewController:VC animated:YES];
         }
     }];
@@ -140,6 +141,7 @@
             HHBaseWebViewcontroller * VC =[[HHBaseWebViewcontroller alloc]init];
             VC.url = modelTemp.url;
             VC.dataModel = modelTemp;
+            
             [self.navigationController pushViewController:VC animated:YES];
         }
     }];

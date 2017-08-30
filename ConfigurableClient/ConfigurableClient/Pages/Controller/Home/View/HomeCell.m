@@ -22,8 +22,8 @@
         [self.iconIma mas_makeConstraints:^(MASConstraintMaker *make) {
             
             make.left.top.equalTo(@15);
-            make.height.equalTo(@70);
-            make.width.equalTo(@105);
+            make.height.width.equalTo(@70);
+//            make.width.equalTo(@105);
 
             
         }];

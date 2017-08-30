@@ -117,7 +117,9 @@
             HeaderModel * modelTemp = [list firstObject];
             HHBaseWebViewcontroller * VC =[[HHBaseWebViewcontroller alloc]init];
             VC.url = modelTemp.url;
-            VC.dataModel = model;
+            VC.dataModel = modelTemp;
+            VC.dataModelTmp = model;
+            
             [self.navigationController pushViewController:VC animated:YES];
         }
     }];
@@ -135,7 +137,8 @@
             HeaderModel * modelTemp = [list firstObject];
             HHBaseWebViewcontroller * VC =[[HHBaseWebViewcontroller alloc]init];
             VC.url = modelTemp.url;
-            VC.dataModel = model;
+            VC.dataModel = modelTemp;
+            VC.dataModelTmp = model;
             [self.navigationController pushViewController:VC animated:YES];
         }
     }];

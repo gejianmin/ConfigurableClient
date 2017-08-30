@@ -91,7 +91,12 @@
     _dataModel = dataModel;
     [self reloadDataTitle:dataModel.title];
     [self createScrollView:dataModel.images title:dataModel.title time:dataModel.date content:dataModel.content caption:dataModel.caption];
-    if ([[YDFMDB manager] isExistWithNewsID:dataModel.newsId]) {
+
+}
+
+- (void)setDataModelTmp:(HeaderModel *)dataModelTmp {
+    _dataModelTmp = dataModelTmp;
+    if ([[YDFMDB manager] isExistWithNewsID:dataModelTmp.newsId]) {
         
         UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithTitle:@"collected" style:UIBarButtonItemStylePlain target:self action:nil];
         self.navigationItem.rightBarButtonItem = item;
@@ -100,7 +105,6 @@
         self.navigationItem.rightBarButtonItem = item;
     }
 }
-
 
 - (void)createScrollView:(NSArray *)arr title:(NSString *)title time:(NSString *)time content:(NSString *)content caption:(NSString *)caption{
  

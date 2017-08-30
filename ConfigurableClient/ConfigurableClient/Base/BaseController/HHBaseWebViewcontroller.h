@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) NSString* url;
 @property (nonatomic, strong) HeaderModel *dataModel;
+@property (nonatomic, strong) HeaderModel *dataModelTmp;
 
 @end
 
