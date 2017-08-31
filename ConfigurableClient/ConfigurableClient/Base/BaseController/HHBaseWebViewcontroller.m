@@ -35,7 +35,7 @@
 }
 
 - (void)right {
-    if ([[YDFMDB manager] addDataWithModel:self.dataModel]) {
+    if ([[YDFMDB manager] addDataWithModel:self.dataModelTmp]) {
         
         [self showToastHUD:@"Collection success" complete:nil];
     }
