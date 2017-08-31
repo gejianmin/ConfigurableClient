@@ -116,7 +116,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.row == 3) {
-        [self showAlertWithTitle:@"Clearing the cache" sureTitle:@"Determine" cancelTitle:@"Cancel" content:nil];
+        [self showAlertWithTitle:@"Clearing the cache" sureTitle:@"OK" cancelTitle:@"Cancel" content:nil];
     }else{
         MPUserItem *item=self.dataSourceArray[indexPath.section][indexPath.row];
         UIViewController *vc=[[item.pushControllerClass alloc] init];
