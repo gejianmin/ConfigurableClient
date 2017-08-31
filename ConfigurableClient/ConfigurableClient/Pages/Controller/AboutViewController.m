@@ -34,7 +34,7 @@
     
     [self.iconView mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(self.view.mas_top).offset(120.0*MPHeightScale);
+        make.top.equalTo(self.view.mas_top).offset(150.0*MPHeightScale);
         make.width.equalTo(@(120*MPWidthScale));
         make.height.equalTo(@(120*MPWidthScale));
         make.centerX.equalTo(self.view.mas_centerX);

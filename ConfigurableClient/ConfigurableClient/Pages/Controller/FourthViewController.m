@@ -24,6 +24,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.dataSourceArray = [[YDFMDB manager] getAllRecords];
+    
     if (self.dataSourceArray.count == 0) {
         [self reloadDataWithStatus:NO];
     }else{

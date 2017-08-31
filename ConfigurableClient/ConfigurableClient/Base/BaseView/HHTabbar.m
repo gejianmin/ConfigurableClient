@@ -93,8 +93,8 @@
         HHButton *drbtn=self.subviews[i];
         if ([drbtn isKindOfClass:NSClassFromString(@"UIButton")]) {
             
-            [drbtn setFrame:CGRectMake(k*self.frame.size.width/self.items.count, k==2?2:4, self.frame.size.width/self.items.count, kTabbarH-5)];
-            //            drbtn.titleRect=CGRectMake(0, drbtn.height-20, drbtn.width, 20);
+            [drbtn setFrame:CGRectMake(k*self.frame.size.width/self.items.count, 5, self.frame.size.width/self.items.count, kTabbarH-3)];
+            //            drbtn.titleRect=CGRectMake(0, drbtn.height-20, drbtn.width, 20);k==2?2:5
             
             k++;
         }
@@ -118,9 +118,9 @@
 }
 -(CGRect)imageRectForContentRect:(CGRect)contentRect{
     CGRect superRect=[super imageRectForContentRect:contentRect];
-    if (_onlyImage) {
-        return superRect;
-    }
+//    if (_onlyImage) {
+//        return superRect;
+//    }
     
     return CGRectMake(contentRect.size.width/2-superRect.size.width/2, (contentRect.size.height-22)/2-superRect.size.height/2, superRect.size.width, superRect.size.height);
 }

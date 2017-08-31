@@ -45,7 +45,7 @@
     [self.contentView addSubview:titleLabel];
     [iconBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView.mas_left).offset(15);
-        make.width.height.equalTo(@22);
+        make.width.height.equalTo(@25);
         make.centerY.equalTo(self.contentView.mas_centerY);
     }];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -51,28 +51,23 @@
 -(NSArray<NSArray <MPUserItem *>*> *)dataSourceArray{
     if (_dataSourceArray == nil) {
         MPUserItem *save=[[MPUserItem alloc] init];
-        //        save.imageName=mp_mine_save;
+        save.imageName=@"意见";
         save.title=@"Comments and feedback";
         save.pushControllerClass=[CommentsAndFeedbackVC class];
         
         MPUserItem * kefu = [[MPUserItem alloc] init];
-        //        kefu.imageName=mp_mine_kefu;
+                kefu.imageName=@"版本";
         kefu.title=@"The version number";
         
         MPUserItem * setting = [[MPUserItem alloc] init];
-        //        setting.imageName=mp_mine_setting;
+        setting.imageName=@"关于";
         setting.title=@"About";
         setting.pushControllerClass=[AboutViewController class];
         
         MPUserItem * clear = [[MPUserItem alloc] init];
-        //        setting.imageName=mp_mine_setting;
+        clear.imageName=@"清除缓存";
         clear.title=@"Clearing the cache";
-        //        setting.pushControllerClass=[MPHtmlViewController class];
-        MPUserItem * select = [[MPUserItem alloc] init];
-        //        setting.imageName=mp_mine_setting;
-        select.title=@"";
-        //        setting.pushControllerClass=[MPHtmlViewController class];
-        
+              
         
         
         _dataSourceArray=@[@[save,kefu,setting,clear]];//,@[setting]

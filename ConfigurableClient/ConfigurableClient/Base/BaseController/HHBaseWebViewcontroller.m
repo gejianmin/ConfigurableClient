@@ -90,7 +90,7 @@
 - (void)setDataModel:(HeaderModel *)dataModel {
     _dataModel = dataModel;
     [self reloadDataTitle:dataModel.title];
-    [self createScrollView:dataModel.images title:dataModel.title time:dataModel.date content:dataModel.content caption:dataModel.caption];
+    [self createScrollView:dataModel.images title:dataModel.title time:dataModel.date content:dataModel.content caption:dataModel.caption dataImage:dataModel.image];
 
 }
 
@@ -106,7 +106,7 @@
     }
 }
 
-- (void)createScrollView:(NSArray *)arr title:(NSString *)title time:(NSString *)time content:(NSString *)content caption:(NSString *)caption{
+- (void)createScrollView:(NSArray *)arr title:(NSString *)title time:(NSString *)time content:(NSString *)content caption:(NSString *)caption dataImage:(NSString *)image{
  
     
     UIScrollView *scrollView = [UIScrollView new];

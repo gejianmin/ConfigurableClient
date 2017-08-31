@@ -56,14 +56,14 @@
     HomeViewController *home=[[HomeViewController alloc] init];
     home.title=@"Headline";
     home.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Headline" image:nil tag:0];
-    home.tabBarItem.image=[UIImage imageNamed:@"tabbar_headline_n"];
-    home.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_headline_s"];
+    home.tabBarItem.image=[UIImage imageNamed:@"headline_n"];
+    home.tabBarItem.selectedImage=[UIImage imageNamed:@"headline_s"];
     
     SecondViewController *service=[[SecondViewController alloc] init];
     service.title=@"World";
     service.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"World" image:nil tag:1];
-    service.tabBarItem.image=[UIImage imageNamed:@"tabbar_business_n"];
-    service.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_business_s"];
+    service.tabBarItem.image=[UIImage imageNamed:@"world_n"];
+    service.tabBarItem.selectedImage=[UIImage imageNamed:@"world_s"];
     
 //    ThirdViewController *vc3=[[ThirdViewController alloc] init];
 //    vc3.title=@"World";
@@ -74,15 +74,15 @@
     FourthViewController * vc4 = [[FourthViewController alloc] init];
     vc4.title=@"Collection";
     vc4.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Collection" image:nil tag:2];
-    vc4.tabBarItem.image=[UIImage imageNamed:@"tabbar_feature_n"];
-    vc4.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_feature_s"];
+    vc4.tabBarItem.image=[UIImage imageNamed:@"collection_n"];
+    vc4.tabBarItem.selectedImage=[UIImage imageNamed:@"collection_s"];
 
     
     MyViewController *exchange=[[MyViewController alloc] init];
     exchange.title=@"Setting";
     exchange.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"Setting" image:nil tag:3];
-    exchange.tabBarItem.image=[UIImage imageNamed:@"tabbar_sport_n"];
-    exchange.tabBarItem.selectedImage=[UIImage imageNamed:@"tabbar_sport_s"];
+    exchange.tabBarItem.image=[UIImage imageNamed:@"setting_n"];
+    exchange.tabBarItem.selectedImage=[UIImage imageNamed:@"setting_s"];
     
     [self addChildViewController:home];
     [self addChildViewController:service];

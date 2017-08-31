@@ -57,7 +57,7 @@
         //@property (nonatomic, strong) NSString * url;/*!< 链接*/
         
                 NSString *carSql = @"create table 'search_record' ('id' integer   ,'newsId' VARCHAR(255) ,'title' VARCHAR(255),'Summary' VARCHAR(255),'date' VARCHAR(255),'url' VARCHAR(255))";
-
+//'url' VARCHAR(255)
         
         [_db executeUpdate:carSql];
     }
